@@ -1,0 +1,1542 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.10.6)  21 OCT 2026 15:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./brochure.tex
+(brochure.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count271
+\c@section=\count272
+\c@subsection=\count273
+\c@subsubsection=\count274
+\c@paragraph=\count275
+\c@subparagraph=\count276
+\c@figure=\count277
+\c@table=\count278
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpar
+se.sty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2026-03-20 L3 programming layer (loader) 
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xe
+tex.def
+File: l3backend-xetex.def 2026-02-18 L3 backend support: XeTeX
+\g__graphics_track_int=\count279
+\g__pdfannot_backend_int=\count280
+\g__pdfannot_backend_link_int=\count281
+))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xete
+x.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count282
+\l__fontspec_language_int=\count283
+\l__fontspec_strnum_int=\count284
+\l__fontspec_tmp_int=\count285
+\l__fontspec_tmpa_int=\count286
+\l__fontspec_tmpb_int=\count287
+\l__fontspec_tmpc_int=\count288
+\l__fontspec_em_int=\count289
+\l__fontspec_emdef_int=\count290
+\l__fontspec_strong_int=\count291
+\l__fontspec_strongdef_int=\count292
+\l__fontspec_tmpa_dim=\dimen151
+\l__fontspec_tmpb_dim=\dimen152
+\l__fontspec_tmpc_dim=\dimen153
+ (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg)
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\polyglossi
+a.sty
+Package: polyglossia 2026/09/11 v2.13 Modern multilingual typesetting with XeLa
+TeX and LuaLaTeX
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count293
+) (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+\l_xpg_alias_keyvals_int=\count294
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-late
+x.ldf
+File: gloss-latex.ldf 2026/09/11 v2.13 polyglossia: module for default language
+
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-russ
+ian.ldf
+File: gloss-russian.ldf 2026/09/11 v2.13 polyglossia: module for Russian
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\xpg-cyrill
+icnumbers.sty
+Package: xpg-cyrillicnumbers 2019/11/15 v0.2 Formatting of Cyrillic alphabetic 
+numbers
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\babelsh.de
+f
+File: babelsh.def 2022/06/21 Babel common definitions for shorthands
+ Taken verbatim from babel files (2022/06/06 v3.76)
+)
+Package babel Info: Making " an active character on input line 118.
+)
+
+Package polyglossia Info: Default language is russian
+
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/polyglossia\gloss-engl
+ish.ldf
+File: gloss-english.ldf 2026/09/11 v2.13 polyglossia: module for English
+)
+
+Package fontspec Info: 
+(fontspec)             Font family 'LiberationSerif(0)' created for font
+(fontspec)             'LiberationSerif' with options
+(fontspec)             [Ligatures=TeX,Path=fonts/,Extension=.ttf,UprightFont=*-
+Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[fonts/LiberationSerif-Regular.ttf]/OT:script=latn;l
+anguage=dflt;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[fonts/LiberationSerif-Bold.ttf]/OT:script=latn;lang
+uage=dflt;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[fonts/LiberationSerif-Italic.ttf]/OT:script=latn;la
+nguage=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[fonts/LiberationSerif-BoldItalic.ttf]/OT:script=lat
+n;language=dflt;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'LiberationSerif(1)' created for font
+(fontspec)             'LiberationSerif' with options
+(fontspec)             [Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFo
+nt=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[fonts/LiberationSerif-Regular.ttf]/OT:script=latn;l
+anguage=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[fonts/LiberationSerif-Bold.ttf]/OT:script=latn;lang
+uage=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[fonts/LiberationSerif-Italic.ttf]/OT:script=latn;la
+nguage=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[fonts/LiberationSerif-BoldItalic.ttf]/OT:script=lat
+n;language=dflt;"
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Regular scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Regular scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Regular scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-ExtraBold scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-ExtraBold scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Italic scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Italic scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-ExtraBoldItalic scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-ExtraBoldItalic scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Inter(0)' created for font 'Inter' with
+(fontspec)             options
+(fontspec)             [Ligatures=TeX,Path=fonts/,Extension=.otf,UprightFont=*-
+Regular,BoldFont=*-ExtraBold,ItalicFont=*-Italic,BoldItalicFont=*-ExtraBoldItal
+ic,Scale=0.92].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-Regular.otf]/OT:script=latn;lan
+guage=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-Regular.otf]/OT:script=latn;lan
+guage=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-ExtraBold.otf]/OT:script=latn;l
+anguage=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-ExtraBold.otf]/OT:script=latn;l
+anguage=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-Italic.otf]/OT:script=latn;lang
+uage=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-Italic.otf]/OT:script=latn;lang
+uage=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-ExtraBoldItalic.otf]/OT:script=
+latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-ExtraBoldItalic.otf]/OT:script=
+latn;language=dflt;+smcp;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Regular scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Regular scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Regular scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-ExtraBold scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-ExtraBold scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Italic scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-Italic scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-ExtraBoldItalic scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Inter-ExtraBoldItalic scale = 0.92.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'Inter(1)' created for font 'Inter' with
+(fontspec)             options
+(fontspec)             [Path=fonts/,Extension=.otf,UprightFont=*-Regular,BoldFo
+nt=*-ExtraBold,ItalicFont=*-Italic,BoldItalicFont=*-ExtraBoldItalic,Scale=0.92]
+.
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-Regular.otf]/OT:script=latn;lan
+guage=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-Regular.otf]/OT:script=latn;lan
+guage=dflt;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-ExtraBold.otf]/OT:script=latn;l
+anguage=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-ExtraBold.otf]/OT:script=latn;l
+anguage=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-Italic.otf]/OT:script=latn;lang
+uage=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-Italic.otf]/OT:script=latn;lang
+uage=dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-ExtraBoldItalic.otf]/OT:script=
+latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.92]"[fonts/Inter-ExtraBoldItalic.otf]/OT:script=
+latn;language=dflt;+smcp;"
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-Regular scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-Regular scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-Bold scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-Italic scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-BoldItalic scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'LiberationMono(0)' created for font
+(fontspec)             'LiberationMono' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFo
+nt=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9]"[fonts/LiberationMono-Regular.ttf]/OT:script=
+latn;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9]"[fonts/LiberationMono-Bold.ttf]/OT:script=lat
+n;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.9]"[fonts/LiberationMono-Italic.ttf]/OT:script=l
+atn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9]"[fonts/LiberationMono-BoldItalic.ttf]/OT:scri
+pt=latn;language=dflt;"
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-Regular scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-Regular scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-Bold scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-Italic scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             LiberationMono-BoldItalic scale = 0.9.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'LiberationMono(1)' created for font
+(fontspec)             'LiberationMono' with options
+(fontspec)             [Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFo
+nt=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9]"[fonts/LiberationMono-Regular.ttf]/OT:script=
+latn;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9]"[fonts/LiberationMono-Bold.ttf]/OT:script=lat
+n;language=dflt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.9]"[fonts/LiberationMono-Italic.ttf]/OT:script=l
+atn;language=dflt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9]"[fonts/LiberationMono-BoldItalic.ttf]/OT:scri
+pt=latn;language=dflt;"
+
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count295
+\Gm@cntv=\count296
+\c@Gm@tempcnt=\count297
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
+\Gm@dimlist=\toks18
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
+cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+) (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip51
+For additional information on amsmath, use the `?' option.
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen164
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen165
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count298
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count299
+\leftroot@=\count300
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count301
+\DOTSCASE@=\count302
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen166
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count303
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count304
+\dotsspace@=\muskip17
+\c@parentequation=\count305
+\dspbrk@lvl=\count306
+\tag@help=\toks20
+\row@=\count307
+\column@=\count308
+\maxfields@=\count309
+\andhelp@=\toks21
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
+\@envbody=\toks22
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen173
+\ar@mcellbox=\box55
+\extrarowheight=\dimen174
+\NC@list=\toks24
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box56
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen175
+\lightrulewidth=\dimen176
+\cmidrulewidth=\dimen177
+\belowrulesep=\dimen178
+\belowbottomsep=\dimen179
+\aboverulesep=\dimen180
+\abovetopsep=\dimen181
+\cmidrulesep=\dimen182
+\cmidrulekern=\dimen183
+\defaultaddspace=\dimen184
+\@cmidla=\count310
+\@cmidlb=\count311
+\@aboverulesep=\dimen185
+\@belowrulesep=\dimen186
+\@thisruleclass=\count312
+\@lastruleclass=\count313
+\@thisrulewidth=\dimen187
+) (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.st
+y
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen188
+\enit@toks=\toks25
+\enit@inbox=\box57
+\enit@count@id=\count314
+\enitdp@description=\count315
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box58
+\beforetitleunit=\skip57
+\aftertitleunit=\skip58
+\ttl@plus=\dimen189
+\ttl@minus=\dimen190
+\ttl@toksa=\toks26
+\titlewidth=\dimen191
+\titlewidthlast=\dimen192
+\titlewidthfirst=\dimen193
+) (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.st
+y
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip59
+\f@nch@offset@elh=\skip60
+\f@nch@offset@erh=\skip61
+\f@nch@offset@olh=\skip62
+\f@nch@offset@orh=\skip63
+\f@nch@offset@elf=\skip64
+\f@nch@offset@erf=\skip65
+\f@nch@offset@olf=\skip66
+\f@nch@offset@orf=\skip67
+\f@nch@height=\skip68
+\f@nch@footalignment=\skip69
+\f@nch@widthL=\skip70
+\f@nch@widthC=\skip71
+\f@nch@widthR=\skip72
+\@temptokenb=\toks27
+) (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen194
+\captionmargin=\dimen195
+\caption@leftmargin=\dimen196
+\caption@rightmargin=\dimen197
+\caption@width=\dimen198
+\caption@indent=\dimen199
+\caption@parindent=\dimen256
+\caption@hangindent=\dimen257
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count316
+\c@continuedfloat=\count317
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.st
+y
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz
+.sty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.s
+ty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-common.tex
+\pgfutil@everybye=\toks28
+\pgfutil@tempdima=\dimen258
+\pgfutil@tempdimb=\dimen259
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-latex.def
+\pgfutil@abb=\box59
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs
+.code.tex
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex
+)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore
+.sty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys
+.sty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+s.code.tex
+\pgfkeys@pathtoks=\toks29
+\pgfkeys@temptoks=\toks30
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+slibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks31
+))
+\pgf@x=\dimen260
+\pgf@y=\dimen261
+\pgf@xa=\dimen262
+\pgf@ya=\dimen263
+\pgf@xb=\dimen264
+\pgf@yb=\dimen265
+\pgf@xc=\dimen266
+\pgf@yc=\dimen267
+\pgf@xd=\dimen268
+\pgf@yd=\dimen269
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count318
+\c@pgf@countb=\count319
+\c@pgf@countc=\count320
+\c@pgf@countd=\count321
+\t@pgf@toka=\toks32
+\t@pgf@tokb=\toks33
+\t@pgf@tokc=\toks34
+\pgf@sys@id@count=\count322
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.
+cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-xetex.def
+File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)
+\pgfsys@objnum=\count323
+)))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+yssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count324
+\pgfsyssoftpath@bigbuffer@items=\count325
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+re.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil
+.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpars
+er.code.tex
+\pgfmath@dimen=\dimen270
+\pgfmath@count=\count326
+\pgfmath@box=\box60
+\pgfmath@toks=\toks35
+\pgfmath@stack@operand=\toks36
+\pgfmath@stack@operation=\toks37
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.basic.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.trigonometric.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.random.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.comparison.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.base.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.round.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.misc.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.integerarithmetics.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc
+.code.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloa
+t.code.tex
+\c@pgfmathroundto@lastzeros=\count327
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code
+.tex)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen271
+\pgf@picmaxx=\dimen272
+\pgf@picminy=\dimen273
+\pgf@picmaxy=\dimen274
+\pgf@pathminx=\dimen275
+\pgf@pathmaxx=\dimen276
+\pgf@pathminy=\dimen277
+\pgf@pathmaxy=\dimen278
+\pgf@xx=\dimen279
+\pgf@xy=\dimen280
+\pgf@yx=\dimen281
+\pgf@yy=\dimen282
+\pgf@zx=\dimen283
+\pgf@zy=\dimen284
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen285
+\pgf@path@lasty=\dimen286
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen287
+\pgf@shorten@start@additional=\dimen288
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count328
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+regraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen289
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+retransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen290
+\pgf@pt@y=\dimen291
+\pgf@pt@temp=\dimen292
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+requick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen293
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen294
+\pgf@sys@shading@range@num=\count329
+\pgf@shadingcount=\count330
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box64
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+relayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+retransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+eshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box65
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+eplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+omp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen295
+\pgf@nodesepend=\dimen296
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+omp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.s
+ty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.
+sty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+s.code.tex))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor
+.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen297
+\pgffor@skip=\dimen298
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count331
+\pgfplotmarksize=\dimen299
+)
+\tikz@lastx=\dimen300
+\tikz@lasty=\dimen301
+\tikz@lastxsaved=\dimen302
+\tikz@lastysaved=\dimen303
+\tikz@lastmovetox=\dimen304
+\tikz@lastmovetoy=\dimen305
+\tikzleveldistance=\dimen306
+\tikzsiblingdistance=\dimen307
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
+\tikztreelevel=\count332
+\tikznumberofchildren=\count333
+\tikznumberofcurrentchild=\count334
+\tikz@fig@count=\count335
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+ematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count336
+\pgfmatrixcurrentcolumn=\count337
+\pgf@matrix@numberofcolumns=\count338
+)
+\tikz@expandcount=\count339
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks40
+\verbatim@line=\toks41
+\verbatim@in@stream=\read3
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.
+sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box70
+\tcb@upperbox=\box71
+\tcb@lowerbox=\box72
+\tcb@phantombox=\box73
+\c@tcbbreakpart=\count340
+\c@tcblayer=\count341
+\c@tcolorbox@number=\count342
+\l__tcobox_tmpa_box=\box74
+\l__tcobox_tmpa_dim=\dimen308
+\tcb@temp=\box75
+\tcb@temp=\box76
+\tcb@temp=\box77
+\tcb@temp=\box78
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbraster.co
+de.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
+\c@tcbrastercolumn=\count343
+\c@tcbrasterrow=\count344
+\c@tcbrasternum=\count345
+\c@tcbraster=\count346
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.cod
+e.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.imag
+e.sty
+Package: tikzfill.image 2026/04/23 v1.2.0 Image filling library for TikZ
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfi
+ll.image.code.tex
+File: tikzlibraryfill.image.code.tex 2026/04/23 v1.2.0 Image filling library
+\l__tikzfill_tmpa_dim=\dimen309
+\l__tikzfill_tmpb_dim=\dimen310
+\l__tikzfill_img_box=\box79
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigs
+aw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable
+.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
+sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box80
+\tcb@totalupperbox=\box81
+\tcb@totallowerbox=\box82
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.cod
+e.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.9.0'
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbtheorems.
+code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.9.0'
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.c
+ode.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.9.0'
+\tcbfitdim=\dimen311
+\tcb@lowerfitdim=\dimen312
+\tcb@upperfitdim=\dimen313
+\tcb@cur@hbadness=\count347
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsu
+tf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.9.0'
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistings.
+code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count348
+\lst@gtempboxa=\box83
+\lst@token=\toks42
+\lst@length=\count349
+\lst@currlwidth=\dimen314
+\lst@column=\count350
+\lst@pos=\count351
+\lst@lostspace=\dimen315
+\lst@width=\dimen316
+\lst@newlines=\count352
+\lst@lineno=\count353
+\lst@maxwidth=\dimen317
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count354
+\lst@skipnumbers=\count355
+\lst@framebox=\box84
+) (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cf
+g
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsc
+ore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbprocessin
+g.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
+)
+\c@tcblisting=\count356
+))
+Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. 
+Library `listings` is loaded instead. on input line 29.
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbexternal.
+code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '6.9.0'
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbmagazine.
+code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '6.9.0'
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbvignette.
+code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '6.9.0'
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryfadings.code.tex
+File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbposter.co
+de.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '6.9.0'
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.st
+y
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
+ekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
+sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
+s.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
+tlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
+y
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count357
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.
+sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen318
+\Hy@linkcounter=\count358
+\Hy@pagecounter=\count359
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+)
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count360
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count361
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen319
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
+c.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count362
+\Field@Width=\dimen320
+\Fld@charsize=\dimen321
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count363
+\c@Item=\count364
+\c@Hfootnote=\count365
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2026-04-24 v7.01q Hyperref driver for XeTeX
+\pdfm@box=\box85
+\c@Hy@AnnotLevel=\count366
+\HyField@AnnotCount=\count367
+\Fld@listcount=\count368
+\c@bookmark@seq@number=\count369
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
+lecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
+counter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip73
+) (brochure.aux)
+\openout1 = `brochure.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 42.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 42.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 42.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 42.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 42.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 42.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 42.
+LaTeX Font Info:    Redeclaring math accent \check on input line 42.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 42.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 42.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 42.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 42.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 42.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/LiberationSerif(0)/m/n on input line
+ 42.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 42.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/m/n on input lin
+e 42.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/m/n
+ on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/LiberationSerif(0)/m/it on input li
+ne 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/LiberationSerif(0)/b/n on input lin
+e 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/Inter(0)/m/n on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/LiberationMono(0)/m/n on input line
+ 42.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/LiberationSerif(0)/m/n --> TU/LiberationSerif(0)/b/n
+ on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/LiberationSerif(0)/b/it on input l
+ine 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/Inter(0)/b/n on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/LiberationMono(0)/b/n on input line
+ 42.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: landscape 
+* h-part:(L,W,R)=(51.21504pt, 742.61676pt, 51.21504pt)
+* v-part:(T,H,B)=(48.36958pt, 495.07823pt, 54.06006pt)
+* \paperwidth=845.04684pt
+* \paperheight=597.50787pt
+* \textwidth=742.61676pt
+* \textheight=495.07823pt
+* \oddsidemargin=-21.05495pt
+* \evensidemargin=-21.05495pt
+* \topmargin=-60.9004pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=28.45274pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count370
+Package hyperref Info: Link coloring OFF on input line 42.
+(brochure.out) (brochure.out)
+\@outlinefile=\write4
+\openout4 = `brochure.out'.
+
+LaTeX Font Info:    Font shape `TU/Inter(1)/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 49.
+LaTeX Font Info:    Font shape `TU/Inter(1)/b/n' will be
+(Font)              scaled to size 10.07397pt on input line 49.
+LaTeX Font Info:    Font shape `TU/Inter(1)/b/n' will be
+(Font)              scaled to size 22.07996pt on input line 49.
+LaTeX Font Info:    Font shape `TU/Inter(1)/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 49.
+LaTeX Font Info:    Font shape `TU/Inter(1)/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 49.
+LaTeX Font Info:    Font shape `TU/Inter(1)/b/n' will be
+(Font)              scaled to size 11.03998pt on input line 55.
+LaTeX Font Info:    Font shape `TU/Inter(1)/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 57.
+LaTeX Font Info:    Font shape `TU/Inter(1)/b/n' will be
+(Font)              scaled to size 7.35999pt on input line 57.
+
+Underfull \hbox (badness 1735) in paragraph at lines 57--58
+[]|\TU/LiberationSerif(1)/m/n/10.95 учебное знание: общепринятое, записано по п
+амяти и отдельно
+ []
+
+
+Overfull \hbox (5.7745pt too wide) in paragraph at lines 67--89
+[][]  
+ []
+
+LaTeX Font Info:    Font shape `TU/Inter(1)/m/n' will be
+(Font)              scaled to size 13.24796pt on input line 93.
+LaTeX Font Info:    Font shape `TU/Inter(1)/b/n' will be
+(Font)              scaled to size 13.24796pt on input line 93.
+File: fig_overview.png Graphic file (type bmp)
+<fig_overview.png>
+LaTeX Font Info:    Font shape `TU/Inter(1)/b/n' will be
+(Font)              scaled to size 9.19998pt on input line 94.
+[1
+
+
+]
+LaTeX Font Info:    Font shape `TU/Inter(1)/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 106.
+LaTeX Font Info:    Font shape `TU/Inter(1)/b/n' will be
+(Font)              scaled to size 6.43999pt on input line 106.
+ [2] [3]
+File: fig_times.png Graphic file (type bmp)
+<fig_times.png>
+ [4] [5]
+File: fig_neuron.png Graphic file (type bmp)
+<fig_neuron.png>
+File: fig_circuit.png Graphic file (type bmp)
+<fig_circuit.png>
+ [6] [7] [8]
+File: fig_redox.png Graphic file (type bmp)
+<fig_redox.png>
+File: fig_switch.png Graphic file (type bmp)
+<fig_switch.png>
+ [9] [10]
+File: fig_loops.png Graphic file (type bmp)
+<fig_loops.png>
+ [11] [12]
+File: fig_day.png Graphic file (type bmp)
+<fig_day.png>
+ [13] [14]
+File: fig_dopamine.png Graphic file (type bmp)
+<fig_dopamine.png>
+ [15] [16] [17]
+File: fig_model.png Graphic file (type bmp)
+<fig_model.png>
+
+[18]
+File: fig_sleepswitch.png Graphic file (type bmp)
+<fig_sleepswitch.png>
+ [19] [20]
+File: fig_population.png Graphic file (type bmp)
+<fig_population.png>
+ [21]
+File: fig_gaps.png Graphic file (type bmp)
+<fig_gaps.png>
+ [22] [23] [24]
+File: fig_results.png Graphic file (type bmp)
+<fig_results.png>
+
+Overfull \hbox (2.93866pt too wide) in paragraph at lines 566--566
+[]|\TU/LiberationSerif(1)/m/n/10 Ф2б$[]$|  
+ []
+
+
+Overfull \hbox (2.28925pt too wide) in paragraph at lines 569--569
+[]|\TU/LiberationSerif(1)/m/n/10 Ф3а$[]$|  
+ []
+
+
+Overfull \hbox (1.68442pt too wide) in paragraph at lines 569--570
+[]|\TU/LiberationSerif(1)/m/n/10 непроверяемо; 
+ []
+
+
+Overfull \hbox (2.93866pt too wide) in paragraph at lines 572--572
+[]|\TU/LiberationSerif(1)/m/n/10 Ф4б$[]$|  
+ []
+
+
+Overfull \hbox (6.73466pt too wide) in paragraph at lines 575--575
+[]|\TU/LiberationSerif(1)/m/n/10 Ф6б,г|  
+ []
+
+
+Overfull \hbox (2.57245pt too wide) in paragraph at lines 576--576
+[]|\TU/LiberationSerif(1)/m/n/10 Ф6в$[]$|  
+ []
+
+
+Overfull \hbox (2.28925pt too wide) in paragraph at lines 578--578
+[]|\TU/LiberationSerif(1)/m/n/10 Ф7а$[]$|  
+ []
+
+
+Overfull \hbox (7.35478pt too wide) in paragraph at lines 581--581
+[]|\TU/LiberationSerif(1)/m/n/10 Ф8б,в|  
+ []
+
+
+Overfull \hbox (4.48369pt too wide) in paragraph at lines 582--582
+[]|\TU/LiberationSerif(1)/m/n/10 Ф10а|  
+ []
+
+
+Overfull \hbox (12.35478pt too wide) in paragraph at lines 583--583
+[]|\TU/LiberationSerif(1)/m/n/10 Ф10б,в|  
+ []
+
+
+Overfull \hbox (4.76689pt too wide) in paragraph at lines 590--590
+[]|\TU/LiberationSerif(1)/m/n/10 Ф16в|  
+ []
+
+
+Overfull \hbox (7.93866pt too wide) in paragraph at lines 591--591
+[]|\TU/LiberationSerif(1)/m/n/10 Ф18б$[]$|  
+ []
+
+
+Overfull \hbox (10.24422pt too wide) in paragraph at lines 592--592
+[]|\TU/LiberationSerif(1)/m/n/10 Ф18б$[]$|  
+ []
+
+
+Overfull \hbox (5.1331pt too wide) in paragraph at lines 595--595
+[]|\TU/LiberationSerif(1)/m/n/10 Ф20д|  
+ []
+
+
+Overfull \hbox (11.0016pt too wide) in paragraph at lines 559--600
+[][]  
+ []
+
+[25] [26]
+Overfull \vbox (820.27551pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (6.14479pt too wide) in paragraph at lines 605--616
+[][]  
+ []
+
+File: fig_slow.png Graphic file (type bmp)
+<fig_slow.png>
+[27] [28] [29] [30] [31]
+File: fig_stairs.png Graphic file (type bmp)
+<fig_stairs.png>
+LaTeX Font Info:    Font shape `TU/Inter(1)/m/it' will be
+(Font)              scaled to size 9.19998pt on input line 713.
+
+
+LaTeX Warning: Float too large for page by 1.85182pt on input line 713.
+
+File: fig_v5.png Graphic file (type bmp)
+<fig_v5.png>
+
+LaTeX Warning: Float too large for page by 7.05719pt on input line 735.
+
+[32] [33] [34] [35]
+Underfull \hbox (badness 1168) in paragraph at lines 794--794
+|[]\TU/Inter(1)/b/n/14.4 Рваность нагрузки: гипотеза, которая не про-
+ []
+
+[36] [37] [38] [39] [40] [41] [42] (brochure.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+ ***********
+Package rerunfilecheck Info: File `brochure.out' has not changed.
+(rerunfilecheck)             Checksum: BD749A0721F399B56376109AE8DEF132;11045.
+ ) 
+Here is how much of TeX's memory you used:
+ 32353 strings out of 402807
+ 694626 string characters out of 5444928
+ 1246553 words of memory out of 5000000
+ 60764 multiletter control sequences out of 15000+600000
+ 632356 words of font info for 106 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 98i,14n,108p,900b,595s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on brochure.pdf (42 pages).
