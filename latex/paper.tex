@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.05cm]{geometry}
+\usepackage[expansion=false]{microtype}
+\usepackage{enumitem,amsmath}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=2pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=1pt,topsep=2pt}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\setlength{\parskip}{2pt}
+\title{\vspace{-1.6cm}\large\bfseries A pre-registered \emph{in silico} falsification programme\\
+on a redox-switch model of parvalbumin-interneuron damage}
+\author{\normalsize Nikita Filippov \quad\textperiodcentered\quad preliminary report \quad\textperiodcentered\quad \href{https://github.com/stockman2/SchizoStudy-v5}{https://github.com/stockman2/SchizoStudy-v5}}
+\date{\normalsize 23 October 2026}
+\begin{document}
+\maketitle
+\vspace{-0.9cm}
+
+\noindent\textbf{What was done.} We built a mechanistic ODE model of oxidative damage to
+parvalbumin interneurons --- a bistable peroxiredoxin/sulfiredoxin redox switch, a two-stage
+inducible defence ($\tau_m=12$\,h, $\tau_s=63$\,h), a Phillips--Robinson sleep--wake switch, and a
+Wilson--Cowan cortex closing the loop through disinhibition --- and then spent most of the effort
+trying to break it. Every hypothesis was written as a numbered rule with its parts, and
+\emph{every threshold was derived from expectations and variances before the computation ran}.
+Verdicts were recorded in an append-only ledger and were never revised afterwards; when a defect
+was found in a rule, the defect was recorded \emph{beside} the verdict and the question was re-asked
+as a new rule on a fresh noise seed.
+
+Of \textbf{127 pre-registered parts across 26 rules: 66 passed, 47 failed, 13 were unfalsifiable,
+and one fell outside its own analytic bracket.} More than a third of our own predictions were
+wrong. That ratio is the main result we wish to report, and the failures below were more
+informative than the successes.
+
+\vspace{2pt}
+\noindent\textbf{What survived.}
+\begin{enumerate}
+\item \emph{Episode duration is set by defence memory, not by repair capacity.} Within a parameter
+set, 99.8\,\% of the variance of episode duration is explained by the history of oxidative load and
+0.2\,\% by repair; the decomposition is exact by construction and the shares sum to unity to
+$10^{-16}$. The dependence on defence memory is affine and does not saturate: a saturating form
+with a shared offset is rejected, although our quantitative out-of-fit prediction missed its own
+$2\,\mathrm{SE}$ band. Consequence: passively strengthening repair cannot reach the clinical
+duration target --- it misses by a factor of 2 to 10.
+\item \emph{Slow defence memory generates a pre-episode precursor.} Removing it lowers the
+precursor in 107 of 174 sets, $p=0.0015$. Slow load noise is not needed for this; its two
+independent justifications were withdrawn.
+\item \emph{The population lives in three phases, not two.} Between the healthy core and the
+collapsed core there is a band of cells that are \emph{more} vulnerable than their collapsed
+neighbours and nevertheless intact --- roughly 8.5\,\% of the population, seventeen standard
+errors from zero. It collapses to \emph{exactly} zero when the slow defence is frozen, so it is a
+dynamical effect rather than a parametric one, and priming widens it without causing it. This is
+hormesis at the population level and it is a prediction of the model, not an artefact of counting.
+\item \emph{The rhythm breaks through a devil's staircase}, with rational rotation numbers,
+alternating cycle lengths on the fractional steps, and a cascade that adds one rather than
+doubling.
+\item \emph{Cell count enters only as effective spread of resilience}, not as numerical resolution;
+the $J\to\infty$ limit exists and was measured, with corrections converging as $1/J$.
+\item \emph{A capacity-dependent feedback loop converts frequent short episodes into rare long
+ones.} With per-cell capacity loss while damaged and slower recovery afterwards, mean episode
+duration rises from 13.1 to 25.6 days while the onset rate \emph{falls} from 0.042 to 0.033 per
+at-risk set-day; episodicity is retained at 0.75 of the open model; the broken state is held after
+load is released, monotonically in release depth ($\rho=+1.000$, $p=0.0083$, the attainable
+minimum); and progression exceeds a capacity-matched static control by $+0.0231$ against a minimum
+detectable effect of $0.0096$ --- replicated as $+0.0223$ and $+0.0211$ on two further independent
+noise seeds.
+\end{enumerate}
+
+\vspace{2pt}
+\noindent\textbf{What failed.}
+\begin{itemize}
+\item \emph{A load-dependent feedback loop of the Grace type is refuted as a model of the
+disease.} Driving oxidative load with the damaged fraction does produce irreversibility, and it is
+not a mere gain knob: it latches states that no static load reaches at all. But irreversibility
+switches on at loop strength 1.11 while episodes extinguish at 0.18 --- a sixfold gap that is
+structural rather than marginal, and robust to a gentler breaking protocol. There is no window in
+which chronicity and episodicity coexist. The reason is now clear: load is a per-set quantity, so a
+loop acting through it moves the whole population together.
+\item \emph{The capacity loop changes the level and the duration of damage but not the shape of
+risk in time.} Its hazard trend exceeds a capacity-matched static arm by only $1.94$ against a
+threshold of $2.23$ computed exactly for that comparison.
+\item \emph{Bursty load does not beat smooth load}, contrary to the hypothesis that rare strong
+excursions dominate; and the measured quantity that first appeared to support it turned out to
+saturate.
+\item Several precursor-slope predictions were \emph{unfalsifiable} at the grid resolution we had
+chosen: the minimum detectable effect was larger than the threshold we had written down.
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textbf{What the failures taught (the transferable part).} The single most useful finding
+is negative and methodological:
+
+\emph{In a model with absorbing states and a heterogeneous population, no absolute null exists for
+any accumulation measure.} The damaged fraction rises on its own, because a bistable switch does
+not release a collapsed set until load is lowered; and the hazard of new episodes declines on its
+own, because the most vulnerable cells are absorbed first and the survivors are less vulnerable.
+Two of our own controls asserted that these baselines were zero. Both were false, and --- this is
+the instructive part --- both \emph{passed at small sample size and failed as data accumulated},
+because the baseline is fixed while the detection threshold shrinks as $1/\sqrt{n}$. A control whose
+null is false is passed by lack of power. Every claim must therefore be a matched difference
+between arms brought to the same damage level, never a test against zero.
+
+Nine further statistical traps were catalogued, each of which had once produced a false conclusion
+in our own hands and each of which is now closed by a check in the code. Four are worth naming:
+a variance-ratio statistic used in four rules was shown analytically to equal $1+\mathrm{CV}^2$ of
+the underlying rates and was declared unfit; an equivalence claim whose tolerance exceeds half the
+range of its own curve cannot be falsified; a threshold must be \emph{attainable}, since $p\le0.05$
+on an exact permutation test over three points has a floor of $1/3!=0.167$, and we once recorded
+``failed'' for a perfectly monotone result; and a comparison point chosen as the nearest element of
+a grid that does not bracket the target answers a question about the grid's edge.
+
+\vspace{2pt}
+\noindent\textbf{Scope, stated as a result rather than a caveat.} The model has no absorption-free
+stationary state, so its domain of validity is windows short compared with the accumulation time.
+It is therefore a model of the \emph{generation and termination of an episode} under oxidative
+load, not of the course of the illness. We did not attempt the global picture and do not claim it.
+The capacity loop is the only mechanism we tested that makes progression appear at all, and it does
+so by lengthening episodes rather than by making them more frequent.
+
+\vspace{2pt}
+\noindent\textbf{Reproducibility.} A fused compiled kernel giving a 3.3-fold wall-clock speed-up was
+proved identical to the reference integrator at two levels: bitwise over 67 output fields on nine
+parameter pins (worst deviation $9.5\times10^{-15}$ against a tolerance of $10^{-12}$), and over the
+entire set of verdicts. Block results are cached under a key that includes the hash of the model
+source, the kernel included --- a discipline added after a kernel defect was found that no pin
+touched. Step-size convergence separates two classes of quantity: continuous means converge to
+within 0.5\,\% by $M=800$, whereas counting quantities do not, with a Richardson limit 2.0\,\% above
+the value at $M=1600$; counting quantities are therefore not tested against thresholds finer than
+that. Whole project could be found in the \href{https://github.com/stockman2/SchizoStudy-v5}{github}.
+
+\vspace{2pt}
+\noindent\textbf{What we would ask next.} The load loop failed because load is a per-set quantity,
+so a loop acting through it moves the whole population together; a structure in which regions couple
+through narrow bottlenecks would break that homogeneity, and is the natural next test. The capacity
+loop lengthens episodes but leaves the shape of risk unchanged, which suggests that progression on
+the scale of the illness needs a component that does \emph{not} fully return. We have deliberately
+not added it: a mechanism introduced to produce the result it was designed to produce is not a test,
+and the rule that would falsify it has to be written first.
+
+\end{document}
