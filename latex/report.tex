@@ -27,7 +27,7 @@
 
 \begin{center}
 {\large\bfseries Report}\\[2pt]
-{\small A pre-registered \emph{in silico} falsification programme on a redox-switch model
+{\small A pre-registered \emph{in silico} refutation programme on a redox-switch model
 of parvalbumin-interneuron damage}\\[2pt]
 {\small Nikita Filippov \textperiodcentered\
 \href{https://github.com/stockman2/SchizoStudy-v5}{github.com/stockman2/SchizoStudy-v5}
@@ -232,7 +232,7 @@ $\tau_s=2.625$\,d)\\
 (keyed by model-source hash)\\
 \code{px/stats.py} & criteria: sign test, median bound, CV$^2$ of gaps, MDE
 adjudication, self-tests\\
-\code{px/predict.py} & analytic expectations before any simulation (hazard model)\\
+\code{px/predict.py} & analytic expectations before any simulation (risk model)\\
 \code{px/report.py} & run report and append-only \code{ledger.json}\\
 \code{px/rules/fNN.py} & one rule per file: \code{needs(cfg)}, \code{run(ctx)}\\
 \code{px/rules/_blocks.py}, \code{_meas.py} & shared block constructors; per-block summary\\
@@ -383,8 +383,8 @@ duration $13.1\to25.6$\,d while the onset rate \emph{falls} $0.042\to0.033$ per
 at-risk set-day; episodicity $0.75$ of the open model; the broken state is held after
 release, monotone in release depth ($\rho=+1.000$, $p=0.0083$); progression exceeds a
 capacity-matched static control by $+0.0231$ vs.\ MDE $0.0096$, replicated as
-$+0.0223$, $+0.0211$ on two further seeds. The one failing part: the hazard \emph{shape}
-is unchanged (trend $1.94$ vs.\ threshold $2.23$, F29c).
+$+0.0223$, $+0.0211$ on two further seeds. The one failing part: the \emph{shape} of risk
+in time is unchanged (risk trend $1.94$ vs.\ threshold $2.23$, F29c).
 \item \emph{Rhythm: a capture staircase} with rational rotation numbers and alternating
 cycle lengths on fractional steps (section~\ref{sec:staircase}).
 \item \emph{$J$ enters only as effective spread of resilience;} the $J\to\infty$ limit
@@ -464,7 +464,7 @@ live defence; any reduction needs an explicit three-configuration boundary layer
 \section{Methodological lessons}\label{sec:lessons}
 In a model with absorbing states and a heterogeneous population, \emph{no absolute null
 exists for any accumulation measure}: the damaged fraction rises on its own (bistable
-sets do not release) and the hazard falls on its own (the vulnerable are absorbed
+sets do not release) and the risk falls on its own (the vulnerable are absorbed
 first). Two of our controls asserted these baselines were zero; both were false and
 both \emph{passed at small sample and failed as data accumulated} --- a false null is
 passed by lack of power, since the threshold shrinks as $1/\sqrt{n}$ while the baseline
