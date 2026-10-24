@@ -1,0 +1,41 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}The clinical picture and the hypothesis}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Strategy: build minimally, falsify systematically}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Version history in brief}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}The model}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The single-cell redox core}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Inducible defence: two stages, priming, asymmetry, capacity}{4}{subsection.2.2}%
+\contentsline {paragraph}{Two stages.}{4}{section*.2}%
+\contentsline {paragraph}{Priming.}{5}{section*.3}%
+\contentsline {paragraph}{Asymmetric defence.}{5}{section*.4}%
+\contentsline {paragraph}{Capacity.}{6}{section*.5}%
+\contentsline {paragraph}{Dopamine (load) loop, version 5.1.}{6}{section*.6}%
+\contentsline {subsection}{\numberline {2.3}The sleep--wake switch}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}The cortex and disinhibition}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Population of heterogeneous cells}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Oxidative load and noise}{7}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Episode definition and the gap-conservation law}{7}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Code and method}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Repository layout}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Running the pipeline}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Parameter sets and block batching}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Rules: pre-registration and the ledger}{10}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Statistical machinery}{10}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Analytic expectations before the computation}{10}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Reproducibility and verification}{11}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}The seven statistical traps}{11}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Results}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The verdict ledger}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}What survived}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}What failed}{13}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Selected results in detail}{14}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Priming (F19)}{14}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Asymmetric defence (F23)}{14}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}The three phases and the saved band (F25)}{14}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}The devil's staircase (F20)}{15}{subsubsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.5}Cell count as a parameter (F13, F22)}{16}{subsubsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.6}The capacity loop (F28, F29)}{16}{subsubsection.4.4.6}%
+\contentsline {subsubsection}{\numberline {4.4.7}The dopamine (load) loop (F26, F27)}{17}{subsubsection.4.4.7}%
+\contentsline {section}{\numberline {5}Methodological lessons}{17}{section.5}%
+\contentsline {section}{\numberline {6}Scope and open questions}{17}{section.6}%
+\contentsline {section}{\numberline {7}Reproducibility summary}{18}{section.7}%
