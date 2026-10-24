@@ -26,7 +26,7 @@
 \begin{document}
 
 \begin{center}
-{\large\bfseries SchizoStudy v5.0 --- Report}\\[2pt]
+{\large\bfseries Report}\\[2pt]
 {\small A pre-registered \emph{in silico} falsification programme on a redox-switch model
 of parvalbumin-interneuron damage}\\[2pt]
 {\small Nikita Filippov \textperiodcentered\
@@ -102,6 +102,11 @@ NMDA signalling.
 log-uniform; $m\in[1,2]$, $\gamma\in[0,1]$, $N_0\in[0.3,1]$ uniform) with
 $\beta=N_0\cdot U(0,3)$ (measured induction up to $2.85\times$). A set is accepted iff
 bistable: window ratio $>1.05$ and two stable states at the geometric-mean load.
+These accepted sets are the model's \emph{potential patients}: only a set whose cell
+already sits in the bistable regime --- the weakened-defence state the hypothesis
+postulates for PV cells under weak NMDA signalling --- can develop the switch-mediated
+damage the model describes; everything else in the sampled space is healthy by
+construction and is not studied.
 $K=200{,}000$ candidates $\to$ $n_{\mathrm{sel}}=2400$ accepted sets (seeded, cached);
 the resting load sits at $q=0.10$ of the window.
 

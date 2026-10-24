@@ -7,8 +7,8 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{russian}\setotherlanguage{english}
 % Шрифты подключаются по имени файла, устанавливать в систему их не нужно.
-\newcommand{\optserif}{Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic}
-\newcommand{\optmono}{Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9}
+\newcommand{\optserif}{Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Ligatures=TeX}
+\newcommand{\optmono}{Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9,Ligatures=TeX}
 \setmainfont{LiberationSerif}[\optserif]\newfontfamily\cyrillicfont{LiberationSerif}[\optserif]
 \setmonofont{LiberationMono}[\optmono]\newfontfamily\cyrillicfonttt{LiberationMono}[\optmono]
 \usepackage[a4paper,margin=1.9cm]{geometry}
@@ -32,8 +32,8 @@
 \begin{document}
 
 \begin{center}
-{\large\bfseries SchizoStudy v5.0 --- технический отчёт}\\[2pt]
-{\small Предзарегистрированная \emph{in silico} программа фальсификации
+{\large\bfseries Отчёт}\\[2pt]
+{\small Пререгистрированная \emph{in silico} программа фальсификации
 редокс-переключательной модели повреждения парвальбуминовых интернейронов}\\[2pt]
 {\small Никита Филиппов \textperiodcentered\
 \href{https://github.com/stockman2/SchizoStudy-v5}{github.com/stockman2/SchizoStudy-v5}
@@ -112,7 +112,12 @@ c'=\frac{1}{T}\Bigl(N+\frac{\beta u}{K_B+u}-c\Bigr).
 $K_B$, $T$ --- равномерно по логарифму; $m\in[1,2]$, $\gamma\in[0,1]$,
 $N_0\in[0{,}3;1]$ --- равномерно), причём $\beta=N_0\cdot U(0,3)$ (измеренная индукция
 до $2{,}85$ раза). Набор принимается, только если он бистабилен: отношение границ окна
-больше $1{,}05$ и два устойчивых состояния при среднегеометрической нагрузке. Из
+больше $1{,}05$ и два устойчивых состояния при среднегеометрической нагрузке. Принятые
+наборы --- это \emph{потенциальные больные} модели: только у тех, чья клетка уже сидит в
+бистабильном режиме (ослабленная защита --- то самое состояние, которое гипотеза
+постулирует для PV-клеток при слабой NMDA-передаче), вообще может развиться
+повреждение переключателя, которое описывает модель; всё остальное разыгранное
+пространство здорово по построению и не изучается. Из
 $K=200\,000$ кандидатов отбирается $n_{\mathrm{sel}}=2400$ принятых наборов
 (детерминированно по зерну, с кэшем); средняя нагрузка стоит на $q=0{,}10$ окна.
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.10.6)  24 OCT 2026 19:34
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.10.6)  24 OCT 2026 20:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -110,7 +110,8 @@ Package fontspec Info:
 (fontspec)             Font family 'LiberationSerif(0)' created for font
 (fontspec)             'LiberationSerif' with options
 (fontspec)             [Ligatures=TeX,Path=fonts/,Extension=.ttf,UprightFont=*-
-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic].
+Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Ligatur
+es=TeX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -133,23 +134,23 @@ Package fontspec Info:
 (fontspec)             Font family 'LiberationSerif(1)' created for font
 (fontspec)             'LiberationSerif' with options
 (fontspec)             [Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFo
-nt=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic].
+nt=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Ligatures=TeX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"[fonts/LiberationSerif-Regular.ttf]/OT:script=latn;l
-anguage=dflt;"
+anguage=dflt;mapping=tex-text;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->"[fonts/LiberationSerif-Bold.ttf]/OT:script=latn;lang
-uage=dflt;"
+uage=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->"[fonts/LiberationSerif-Italic.ttf]/OT:script=latn;la
-nguage=dflt;"
+nguage=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->"[fonts/LiberationSerif-BoldItalic.ttf]/OT:script=lat
-n;language=dflt;"
+n;language=dflt;mapping=tex-text;"
 
 
 Package fontspec Info: 
@@ -177,23 +178,23 @@ Package fontspec Info:
 (fontspec)             'LiberationMono' with options
 (fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
 Space,Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFo
-nt=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9].
+nt=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9,Ligatures=TeX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[0.9]"[fonts/LiberationMono-Regular.ttf]/OT:script=
-latn;language=dflt;"
+latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->s*[0.9]"[fonts/LiberationMono-Bold.ttf]/OT:script=lat
-n;language=dflt;"
+n;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[0.9]"[fonts/LiberationMono-Italic.ttf]/OT:script=l
-atn;language=dflt;"
+atn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->s*[0.9]"[fonts/LiberationMono-BoldItalic.ttf]/OT:scri
-pt=latn;language=dflt;"
+pt=latn;language=dflt;mapping=tex-text;"
 
 
 Package fontspec Info: 
@@ -220,23 +221,24 @@ Package fontspec Info:
 (fontspec)             Font family 'LiberationMono(1)' created for font
 (fontspec)             'LiberationMono' with options
 (fontspec)             [Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFo
-nt=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9].
+nt=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9,Ligatures=T
+eX].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->s*[0.9]"[fonts/LiberationMono-Regular.ttf]/OT:script=
-latn;language=dflt;"
+latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
 (fontspec)             <->s*[0.9]"[fonts/LiberationMono-Bold.ttf]/OT:script=lat
-n;language=dflt;"
+n;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->s*[0.9]"[fonts/LiberationMono-Italic.ttf]/OT:script=l
-atn;language=dflt;"
+atn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
 (fontspec)             <->s*[0.9]"[fonts/LiberationMono-BoldItalic.ttf]/OT:scri
-pt=latn;language=dflt;"
+pt=latn;language=dflt;mapping=tex-text;"
 
 
 (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
@@ -680,12 +682,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [2]
 LaTeX Font Info:    Font shape `TU/LiberationMono(1)/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 234.
+(Font)              scaled to size 8.09995pt on input line 239.
 LaTeX Font Info:    Font shape `TU/LiberationMono(1)/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 261.
+(Font)              scaled to size 9.85492pt on input line 266.
  [3] [4] [5] [6]
 LaTeX Font Info:    Font shape `TU/LiberationMono(1)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 539.
+(Font)              scaled to size 8.99994pt on input line 544.
  [7] [8] (report_ru.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -695,12 +697,12 @@ Package rerunfilecheck Info: File `report_ru.out' has not changed.
 (rerunfilecheck)             Checksum: F3668761DB105EDCF0CC1BE90A9060B1;4397.
  ) 
 Here is how much of TeX's memory you used:
- 13899 strings out of 402807
- 271589 string characters out of 5444928
- 769391 words of memory out of 5000000
- 42627 multiletter control sequences out of 15000+600000
- 635191 words of font info for 102 fonts, out of 8000000 for 9000
+ 13891 strings out of 402807
+ 271305 string characters out of 5444928
+ 770621 words of memory out of 5000000
+ 42623 multiletter control sequences out of 15000+600000
+ 635159 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,15n,93p,548b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,15n,96p,548b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on report_ru.pdf (8 pages).
