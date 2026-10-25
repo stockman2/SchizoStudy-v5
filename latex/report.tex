@@ -81,13 +81,24 @@ dynamics are
 &\nu=\varepsilon u+\frac{xu}{1+u},\qquad
 \varepsilon=e_0c^{\gamma},\qquad
 N=\frac{N_0}{1+u/K_N},\\
-&x'=c^{m}(1-x)-\mu_0\frac{xu^2}{1+u},\qquad
-c'=\frac{1}{T}\Bigl(N+\frac{\beta u}{K_B+u}-c\Bigr).
+&\dot x=c^{m}(1-x)-\mu_0\frac{xu^2}{1+u},\qquad
+\dot c=\frac{1}{T}\Bigl(N+\frac{\beta u}{K_B+u}-c\Bigr).
 \end{aligned}
 \end{equation}
 The first line and the $x$-equation are measured kinetics (Selvaggio et al.\ 2018); the
-$c$-equation is an assumption of form. $T$ is the defence-protein lifetime in repair-time
-units; $N_0<1$ is a congenitally weak receptor.
+$c$-equation is an assumption of form. Notation:
+\begin{itemize}
+\item $e_0$: scale of the non-enzymatic clearance $\varepsilon u$; $\mu_0$: scale of
+the two-hit hyperoxidation $\mu_0 xu^2/(1+u)$ relative to repair;
+\item $m$: exponent of the defence-amplified repair $c^m(1-x)$; $\gamma$: exponent of
+the bypass clearance $\varepsilon=e_0c^\gamma$;
+\item $K_N$: saturation of the peroxide suppression of the receptor-maintained defence
+$N=N_0/(1+u/K_N)$, with $N_0<1$ a congenitally weak receptor;
+\item $\beta$, $K_B$: strength and half-saturation of the stress induction
+$\beta u/(K_B+u)$;
+\item $T$: defence-protein lifetime in repair-time units.
+\end{itemize}
+Per-term provenance with statuses: \code{latex/core_derivation.tex}.
 
 \begin{proposition}[Bistability]
 Over-oxidised peroxiredoxin is repaired slowly, so working enzyme \emph{decreases} with
@@ -153,7 +164,13 @@ Phillips--Robinson, ``new nominal'' set (Skeldon et al.\ 2014), taken whole, unt
 \dot G=\begin{cases}(1-G)/18.2\,\mathrm{h}&\text{awake},\\-G/4.2\,\mathrm{h}&\text{asleep},\end{cases}
 \end{aligned}
 \end{equation}
-wakefulness $:=\;Q(V_m)>1$\,s$^{-1}$. Checks against publication: folds at
+wakefulness $:=\;Q(V_m)>1$\,s$^{-1}$. Here $Q$ is the firing-rate sigmoid
+($Q_{\max}=100$\,s$^{-1}$, threshold $\theta$, slope $\sigma$); $V_v$, $V_m$ the
+sleep- and monoaminergic-nucleus voltages with mutual inhibition $\nu_{vm}$, $\nu_{mv}$;
+$D_v$ the drive to the sleep nucleus --- constant part $B_0$, circadian amplitude
+$\nu_{vc}$ with phase $\alpha$, somnogen weight $A_G$; $G$ the somnogens;
+$-k_d D_{\mathrm{cpl}}$ the sleep--damage coupling, with $D_{\mathrm{cpl}}$ the mean
+damage or the damaged fraction. Checks against publication: folds at
 $1.450/2.463$\,mV (paper: $1.45/2.46$); free cycle $15.5/8.5/24.0$\,h; somnogen swing
 $0.527$ vs.\ $0.50$ --- unfitted. Damage enters via $-k_d D_{\mathrm{cpl}}$
 ($k_d=2$\,mV): a damaged population suppresses the sleep nucleus and lengthens
@@ -166,7 +183,9 @@ Wilson--Cowan pair ($E$ excitatory, $I$ PV), $F(z,a,\theta)=1/(1+e^{-a(z-\theta)
 \dot I=-I+F(c_3E-c_4gI),\qquad
 g=1-0.4\,D,
 \end{equation}
-$P_e=P_{e0}+P_{e1}\min(Q(V_m)/Q_{\mathrm{wake}},1)$. The multiplier on \emph{all} PV
+$P_e=P_{e0}+P_{e1}\min(Q(V_m)/Q_{\mathrm{wake}},1)$; here $c_1$--$c_4$ are the
+connectivity weights, $P_e$ the wakefulness-borne drive to $E$, $Q_{\mathrm{wake}}$ its
+wake threshold. The multiplier on \emph{all} PV
 output weights with $g_{\mathrm{dep}}=0.4$ is from Volman et al.\ 2011 (inhibition to
 60\,\%). Cortical scales are $10^3$ times faster than everything else: stationary
 solution by damped iteration (adiabatic elimination); the gamma rhythm is absent by
@@ -175,8 +194,9 @@ not a fitted gain.
 
 \subsection{Population}\label{sec:pop}
 $J=32$ cells differing in one scalar, the load multiplier
-$v_j=\exp(\sigma_v z_{p_j})/\mathrm{mean}$, $\sigma_v=0.10$, fixed-edge probability
-grid pinned to $J=32$. Cells couple only through network activity (load on survivors
+$v_j=\exp(\sigma_v z_{p_j})/\mathrm{mean}$: $\sigma_v=0.10$ is the spread and $z_{p_j}$
+the fixed normal quantiles of the edge-pinned probability grid (pinned to $J=32$).
+Cells couple only through network activity (load on survivors
 rises with the damaged fraction). Gradualness is \emph{from the spread, not the
 network} (F5, refuted). The grid subtlety: $J$ is a model parameter through the
 realised spread, $\mathrm{std}(\ln v)=0.1226/0.1060/0.0980/0.0943$ at
@@ -184,8 +204,9 @@ $J=8/16/32/64$ vs.\ $0.0910$ in the limit ($O(1/J)$ convergence), with log-sensi
 $\approx2.5$ (section~\ref{sec:J}).
 
 \subsection{Load, episodes, and the gap law}\label{sec:gap}
-The load $L(t)$: base at $q=0.10$ of the window; circadian swing 20\,\% (weight $A_H$
-calibrated on the switch); fast noise $\sigma=0.08$ on log-load, correlation $0.3T$;
+The load $L(t)$: base at $q=0.10$ of the window; circadian swing 20\,\% --- the weight
+$A_H$ of the somnogen deviation $G-\bar G$ in the load, calibrated on the switch;
+fast noise $\sigma=0.08$ on log-load, correlation $0.3T$;
 slow noise \emph{off} (withdrawn in F6, F18); optional serotonin bursts
 ($\times1.5$, rate $0.1$/day, decay 2\,h, ceiling $\times2$); auxiliary protocols for
 the loop rules (two-phase break--release; static multiplier $n_{\mathrm{mul}}$ as the

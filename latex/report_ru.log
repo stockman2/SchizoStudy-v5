@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.10.6)  24 OCT 2026 20:48
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.10.6)  25 OCT 2026 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -680,15 +680,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [1
 
-] [2]
+]
 LaTeX Font Info:    Font shape `TU/LiberationMono(1)/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 240.
+(Font)              scaled to size 9.85492pt on input line 110.
+ [2]
 LaTeX Font Info:    Font shape `TU/LiberationMono(1)/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 267.
- [3] [4] [5] [6]
+(Font)              scaled to size 8.09995pt on input line 260.
+ [3] [4] [5] [6] [7]
 LaTeX Font Info:    Font shape `TU/LiberationMono(1)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 548.
- [7] [8] (report_ru.aux)
+(Font)              scaled to size 8.99994pt on input line 568.
+ [8] (report_ru.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -699,10 +700,10 @@ Package rerunfilecheck Info: File `report_ru.out' has not changed.
 Here is how much of TeX's memory you used:
  13891 strings out of 402807
  271305 string characters out of 5444928
- 770621 words of memory out of 5000000
+ 768621 words of memory out of 5000000
  42623 multiletter control sequences out of 15000+600000
  635159 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,15n,96p,548b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,15n,96p,548b,537s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on report_ru.pdf (8 pages).
