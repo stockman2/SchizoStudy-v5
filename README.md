@@ -1,5 +1,7 @@
 # Редокс-модель PV-интернейронов: как устроен проект и как его гонять
 
+> **English version of this description:** [see below](#english-description-of-the-project).
+
 ## Запуск
 
 ```bash
@@ -74,3 +76,112 @@ python tests/test_regression.py            # побитовая сверка с 
   Отдельно помнить: их хеш входит в ключ кэша блоков, поэтому любая правка там обесценивает весь
   кэш — это правильно (старые блоки не подмешаются), но это часы счёта, и делать это надо осознанно,
   одним прогоном. Поправка сетки уязвимости из Ф22(в) — ровно такой случай.
+
+---
+
+## English description of the project
+
+**What this is.** A mechanistic ODE model of oxidative damage to parvalbumin (PV)
+interneurons, run as a pre-registered *in silico* refutation programme: every
+hypothesis is a numbered rule, thresholds come from analytic expectations computed
+before any simulation, and verdicts live in an append-only ledger. The science is
+described in `latex/report.tex` (English) and `latex/report_ru.tex` (Russian); the
+per-term provenance of the core equations is in `latex/core_derivation.tex`.
+
+### Run
+
+```bash
+cd ~/redox
+python run.py --list                       # available rules
+python run.py --rules all --dry            # block count and time estimate, no compute
+python run.py --rules f19                  # one rule; f02,f06,f18: several
+python run.py --rules all --sets 300       # all rules on the previous sample
+python run.py --ledger                     # accumulated verdict journal
+python tests/test_regression.py            # bitwise check vs mass_core6.py
+```
+
+Only the blocks required by the chosen rules are computed. Identical blocks of
+different rules are hash-deduplicated and computed once: `--rules all` requests 78
+blocks, 40 are unique. **Run `--dry` first.** At `nsel = 2000` a full "all rules" run
+takes about three hours: time grows linearly in the number of sets, days, and cells J.
+
+### Files
+
+| file | contents |
+|---|---|
+| `run.py` | entry point: CLI args, criteria self-check, block assembly, report, ledger |
+| `config/base.toml` | all run parameters. Change them HERE, not in code |
+| `px/consts.py` `core.py` `cortex.py` `sleep.py` `model.py` | the model, moved from `mass_core6.py` VERBATIM; edits only together with the regression test |
+| `px/conf.py` | TOML config, cached set sampling, sleep/cortex layers, gap law, band |
+| `px/batch.py` | blocks, hash dedup, per-block parallelism, block cache (keyed by model-source hash) |
+| `px/stats.py` | criteria: sign test, median bound, CV² of gaps, load, POWER, "unfalsifiable" verdict |
+| `px/predict.py` | analytic expectations before any compute: one risk model for all rules |
+| `px/report.py` | run report and append-only `ledger.json` |
+| `px/rules/_blocks.py` | shared block constructors; different rules must request the same block through one function |
+| `px/rules/_meas.py` | per-block summary (`meas`) and precursor curves |
+| `px/rules/fNN.py` | one rule per file: `needs(cfg)` — required blocks, `run(ctx)` — numbers and report |
+| `tests/test_regression.py` | four checks vs the monolith, including a bitwise one |
+
+### Rules with their own compute (request no blocks, absent from `--dry` estimates)
+
+| rule | what it computes | cost |
+|---|---|---|
+| `f10` | recorder of EVERY episode: tail, damage peak, time above the window. Step copy verified bitwise vs `px.model.simulate` | ~7 min at `M = 1600`, own cache `cache/f10_*.npz` |
+| `f20` | period-doubling cascade of the deterministic switch, no cells, no redox | seconds–minutes, no cache |
+| `mass_core6.py` | the frozen monolith: reference only, not used in compute | |
+
+### How to add a rule
+
+1. `px/rules/f20.py` with two functions: `needs(cfg)` returns a list of `Block`s,
+   `run(ctx)` returns `(dict, list of report lines)`.
+2. Request blocks through `_blocks.py`. If a new block is needed, add a function there
+   rather than assembling it in place: otherwise two rules silently get different
+   blocks and pairwise comparisons between them fall apart.
+3. Pass every part through `stats.adjudicate` or `stats.sign_adjudicate`: they return
+   "unfalsifiable" on their own when power is insufficient.
+4. `ctx.verdict(...)` for every part — otherwise it will not appear in the ledger.
+
+### Pipeline discipline
+
+- Only requested blocks are computed; identical blocks are deduplicated by hash
+  (78 requested → 40 unique).
+- Block results are cached under a key containing the model source hash: editing the
+  model invalidates the cache by design.
+- Parallelisation is per block only: noise is drawn for one block length and repeated
+  over scan points, so blocks are strictly paired.
+- Verdicts are never revised: a defect is annotated beside the verdict and the
+  question is re-asked as a new rule on a fresh seed.
+
+### Verification
+
+- `tests/test_regression.py` requires set sampling, band arithmetic, and `simulate`
+  to match the frozen monolith `mass_core6.py` bitwise on pinned configurations;
+  cross-machine comparison uses a tolerance of 1e-12 with a machine fingerprint
+  (measured worst 3e-15).
+- The fused numba kernel is assembled from the reference source by textual
+  substitution with uniqueness checks; it is verified on all 67 output fields over
+  nine pinned configurations and by diffing all verdicts (3.3× wall-clock gain).
+
+### Three rules learned the hard way
+
+1. **A criterion needs a null value, its own noise, and its own power.** A threshold
+   closer to the null value than the MDE = 2.4865·SE distinguishes nothing: the
+   verdict is "unfalsifiable", SYMMETRICALLY — also where the rule would have passed.
+2. **The direction of the sign test is a mandatory argument.** On 14.10, in F19(c) it
+   was silently reversed: p = 0.989 instead of 0.038.
+3. **The median over sets of a rare-event share is degenerate:** it collapses to zero
+   as soon as fewer than half of the sets have any events. The share over all events
+   is always printed next to it.
+
+### What must not be done
+
+- Changing a verdict after the fact. A rule's unfitness goes into a `note` beside the
+  verdict; the verdict stays. Fixing code for an ALREADY RECORDED rule is not a
+  review.
+- Slicing a batch by rows across processes: the noise is drawn per block length, so
+  bitwise reproducibility would break. Parallelise by blocks only.
+- Editing `px/model.py`, `core.py`, `cortex.py`, `sleep.py`, `consts.py` without
+  `tests/test_regression.py`. Remember that their hash enters the block-cache key, so
+  any edit there invalidates the whole cache — correct (old blocks never mix in), but
+  it costs hours of compute and should be done deliberately, in one run. Fixing the
+  vulnerability grid from F22(c) is exactly such a case.

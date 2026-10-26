@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.10.14)  25 OCT 2026 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.10.14)  26 OCT 2026 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,9 +23,12 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen150
 )
+(C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/cmap\cmap.sty
+Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
+)
 (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
+<<t1.cmap>>)
 (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
@@ -376,24 +379,24 @@ File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -429,13 +432,13 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 26.
-Package microtype Info: Applying patch `item' on input line 26.
-Package microtype Info: Applying patch `toc' on input line 26.
-Package microtype Info: Applying patch `eqnum' on input line 26.
-Package microtype Info: Applying patch `footnote' on input line 26.
-Package microtype Info: Applying patch `verbatim' on input line 26.
-LaTeX Info: Redefining \microtypesetup on input line 26.
+LaTeX Info: Redefining \microtypecontext on input line 29.
+Package microtype Info: Applying patch `item' on input line 29.
+Package microtype Info: Applying patch `toc' on input line 29.
+Package microtype Info: Applying patch `eqnum' on input line 29.
+Package microtype Info: Applying patch `footnote' on input line 29.
+Package microtype Info: Applying patch `verbatim' on input line 29.
+LaTeX Info: Redefining \microtypesetup on input line 29.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -447,13 +450,14 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 29.
 
 (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
 
 
 (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -462,7 +466,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
 
 
 (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -471,61 +475,58 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\Nikita\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+[1
+
+{C:/Users/Nikita/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+[3]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-[1
-
-{C:/Users/Nikita/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-[3] [4] [5] [6] [7] [8] (report.aux)
+ [4] [5] [6] [7] [8] (report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 939377B83E07C8D14CB62F7118DBE616;2825.
+(rerunfilecheck)             Checksum: 69D47B8860FB011BDED8447FF4000B75;2439.
  ) 
 Here is how much of TeX's memory you used:
- 12563 strings out of 467691
- 197359 string characters out of 5414502
- 669504 words of memory out of 5000000
- 41416 multiletter control sequences out of 15000+600000
- 645073 words of font info for 84 fonts, out of 8000000 for 9000
+ 12641 strings out of 467691
+ 198762 string characters out of 5414502
+ 670348 words of memory out of 5000000
+ 41461 multiletter control sequences out of 15000+600000
+ 644447 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,79p,1005b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
-t1000.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\ectt0900.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecrm0900.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ectt1095.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/l
-jfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Nikita\AppData\Local\MiK
-TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Nikita\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Nikita\App
-Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Nik
-ita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Us
-ers\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk>
- <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1
-200.pk><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Nikita/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Nikita/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Nikita/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Nikita
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/User
-s/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-<C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr9.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Nikita/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (8 pages, 364302 bytes).
+ 75i,15n,79p,1005b,656s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecr
+m0900.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
+600\ectt1095.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\tcrm1095.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecti1095.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Nikita\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Nikita\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Nikita\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Nikita\App
+Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Nik
+ita\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Use
+rs/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmmi6.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Nikita/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Nikita/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Nikita/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Niki
+ta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Us
+ers/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb><C:/Users/Nikita/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on report.pdf (8 pages, 320130 bytes).
 PDF statistics:
- 785 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 11441 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 674 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 10413 words of extra memory for PDF output out of 12000 (max. 10000000)
 

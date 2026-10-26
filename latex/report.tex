@@ -3,6 +3,7 @@
 % Compiles with pdflatex.
 % ============================================================================
 \documentclass[11pt,a4paper]{article}
+\usepackage{cmap}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1.9cm]{geometry}
@@ -10,9 +11,11 @@
 \usepackage{enumitem,amsmath,amssymb}
 \usepackage{booktabs,titlesec,amsthm,array}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A refutation programme on a redox-switch model of PV-interneuron damage},pdfauthor={Nikita Filippov}}
 \setlist[itemize]{leftmargin=1.0em,itemsep=0pt,topsep=1pt}
 \setlist[enumerate]{leftmargin=1.2em,itemsep=0pt,topsep=1pt}
 \setlength{\parskip}{1pt}
+\emergencystretch=2em
 \titleformat{\section}{\large\bfseries}{\thesection.}{0.4em}{}
 \titlespacing*{\section}{0pt}{7pt plus 1pt}{3pt}
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.4em}{}
@@ -54,8 +57,9 @@ flux. Part of the antioxidant defence is produced only while the NMDA receptor -
 cell's activity sensor --- works; a weak receptor means less defence and more oxidants,
 and oxidants suppress the receptor: a positive loop. The overloaded PV cell does not die
 but \emph{silences} (less parvalbumin, less GAD67), the cortex disinhibits, load rises:
-a second loop; a disinhibited hippocampus raises dopamine responsivity (Grace circuit),
-the bridge to positive symptoms. Each arrow is supported experimentally; the chain as a
+a second loop; a disinhibited hippocampus raises dopamine responsivity (the Grace
+circuit, in which hippocampal output drives the dopamine system) --- the bridge to
+positive symptoms. Each arrow is supported experimentally; the chain as a
 whole never has been. The quantitative question: is the loop gain large enough to
 \emph{close}, i.e.\ to make the cell bistable? Bistability is what converts slow
 accumulation into a sharp transition with hysteresis --- the clinical shape (long
@@ -63,10 +67,7 @@ prodrome, abrupt first episode, episodes of hours--days).
 
 \emph{Strategy.} Build the minimal model; then falsify it systematically: numbered rules
 with parts, thresholds from analytic expectations only, append-only verdict ledger,
-bitwise-verified code, frozen reference implementation. Versions: v3 added the sleep
-switch, cortex, population; v4 the two-stage defence, priming, staircase, and the
-statistical discipline; v5 the asymmetric defence, the three-phase population, the fused
-kernel, and the two loop rules (F26--F29).
+bitwise-verified code, frozen reference implementation.
 
 \section{The model}\label{sec:model}
 The model is a stack of four layers with separated scales: the cell (minutes--days),
@@ -86,7 +87,10 @@ N=\frac{N_0}{1+u/K_N},\\
 \end{aligned}
 \end{equation}
 The first line and the $x$-equation are measured kinetics (Selvaggio et al.\ 2018); the
-$c$-equation is an assumption of form. Notation:
+$c$-equation is an assumption of form. The core is a two-variable reduction of the
+Selvaggio--Coelho--Salvador model \cite{selvaggio}: the thioredoxin system is in excess
+(so it collapses into an effective repair rate), peroxide is adiabatically eliminated,
+and the slow sulfiredoxin induction becomes $c$. Notation:
 \begin{itemize}
 \item $e_0$: scale of the non-enzymatic clearance $\varepsilon u$; $\mu_0$: scale of
 the two-hit hyperoxidation $\mu_0 xu^2/(1+u)$ relative to repair;
@@ -98,15 +102,24 @@ $N=N_0/(1+u/K_N)$, with $N_0<1$ a congenitally weak receptor;
 $\beta u/(K_B+u)$;
 \item $T$: defence-protein lifetime in repair-time units.
 \end{itemize}
-Per-term provenance with statuses: \code{latex/core_derivation.tex}.
+The provenance of each term is documented in the repository.
 
 \begin{proposition}[Bistability]
 Over-oxidised peroxiredoxin is repaired slowly, so working enzyme \emph{decreases} with
 peroxide while clearance \emph{requires} enzyme: the feedback in~\eqref{eq:core}
 produces two saddle-node folds and a hysteresis window of loads in which ``defence on''
-and ``defence off'' are both stable. Measured cells lie outside the window; entering it
-requires repair weakened $1.6$--$22$-fold --- the proposed state of PV cells under weak
-NMDA signalling.
+and ``defence off'' are both stable. Bistability of the fast layer (defence $c$ frozen)
+is exact: with $\mu=\mu_0/c^{m}$ the nullcline
+$\nu(u)=\varepsilon u+u/(1+u+\mu u^2)$ is non-monotone iff
+\begin{equation}\label{eq:phi}
+\varepsilon<\Phi(\mu),\qquad
+\Phi(\mu)=\max_{u>0}\frac{\mu u^2-1}{(1+u+\mu u^2)^2},
+\end{equation}
+since $\tfrac{d\nu}{du}=\varepsilon+(1-\mu u^2)/(1+u+\mu u^2)^2$; the folds are the
+extrema of $\nu(u)$, and the slow variable $c$ moves them without creating or removing
+the window. Measured cells (the 15 cell lines of Selvaggio et al.~\cite{selvaggio})
+lie outside the window; entering it requires repair weakened $1.6$--$22$-fold --- the
+proposed state of PV cells under weak NMDA signalling.
 \end{proposition}
 
 \emph{Parameter sets.} Nine parameters are sampled ($e_0$, $\mu_0$, $K_N$, $K_B$, $T$
@@ -128,9 +141,8 @@ the resting load sits at $q=0.10$ of the window.
 \dot s=\frac{1}{\tau_s}(m-s),\qquad
 \tau_m=12\,\mathrm{h},\ \tau_s=63\,\mathrm{h},
 \end{equation}
-with step response $s(t)=1-(\tau_s e^{-t/\tau_s}-\tau_m e^{-t/\tau_m})/(\tau_s-\tau_m)$
---- always sigmoidal; half-level at 57\,h. The stationary state (hence window, folds,
-gap law) is unchanged; only the transient changes.
+with a step response that is always sigmoidal; half-level at 57\,h. The stationary
+state (hence window, folds, gap law) is unchanged; only the transient changes.
 
 \emph{Priming.} A trace $p$ on the induction signal amplifies it:
 $\dot p=(u/(K_B+u)-p)/\tau_p$, $\beta_{\mathrm{eff}}=\beta(1+Ap)$, $A=2$ (ceiling
@@ -149,8 +161,10 @@ $f=0.705$ (measured wake fraction). Asymmetry turns the integrator into a peak d
 \end{proposition}
 
 \emph{Capacity loop.} Per cell, while damaged, $N_0\to N_0(1-a_n)$ (loss 1\,d), recovery
-slow (30\,d): a latch on recovery, not on load. \emph{Dopamine loop} (v5.1): a tone $d$
-driven by disinhibition $E/E_r-1$ or by $D$ ($\tau_d=7$\,d) multiplies the load by
+slow (30\,d): a latch on recovery, not on load. \emph{Dopamine loop}: a tone $d$
+driven by disinhibition $E/E_r-1$ (excitation above its resting level $E_r$) or by the
+damaged fraction $D$ ($\tau_d=7$\,d; $D$ is defined in section~\ref{sec:gap}) multiplies
+the load by
 $(1+a_d d)$; at $a_d=0$ the model is reproduced bitwise.
 
 \subsection{Sleep--wake switch}\label{sec:sleep}
@@ -171,7 +185,7 @@ $D_v$ the drive to the sleep nucleus --- constant part $B_0$, circadian amplitud
 $\nu_{vc}$ with phase $\alpha$, somnogen weight $A_G$; $G$ the somnogens;
 $-k_d D_{\mathrm{cpl}}$ the sleep--damage coupling, with $D_{\mathrm{cpl}}$ the mean
 damage or the damaged fraction. Checks against publication: folds at
-$1.450/2.463$\,mV (paper: $1.45/2.46$); free cycle $15.5/8.5/24.0$\,h; somnogen swing
+$1.450/2.463$\,mV; free cycle $15.5/8.5/24.0$\,h; somnogen swing
 $0.527$ vs.\ $0.50$ --- unfitted. Damage enters via $-k_d D_{\mathrm{cpl}}$
 ($k_d=2$\,mV): a damaged population suppresses the sleep nucleus and lengthens
 wakefulness.
@@ -207,7 +221,8 @@ $\approx2.5$ (section~\ref{sec:J}).
 The load $L(t)$: base at $q=0.10$ of the window; circadian swing 20\,\% --- the weight
 $A_H$ of the somnogen deviation $G-\bar G$ in the load, calibrated on the switch;
 fast noise $\sigma=0.08$ on log-load, correlation $0.3T$;
-slow noise \emph{off} (withdrawn in F6, F18); optional serotonin bursts
+slow noise ($\sigma_s$) \emph{off} --- withdrawn in F6, F18, but $\sigma_s$ stays in
+the band budget; optional serotonin bursts
 ($\times1.5$, rate $0.1$/day, decay 2\,h, ceiling $\times2$); auxiliary protocols for
 the loop rules (two-phase break--release; static multiplier $n_{\mathrm{mul}}$ as the
 loop's static equivalent).
@@ -220,10 +235,10 @@ burst and whose downward gap fits the noise budget $2\sigma+\sigma_s$.
 \end{definition}
 
 \begin{proposition}[Gap conservation]\label{prop:gap}
-With window ratio $W$, load position $q$ (log scale), feedback factor $F$, daily peak
-and trough $P,T$:
+With window ratio $W$, load position $q$ (log scale), feedback factor $\kappa$, daily
+peak and trough $P_+,P_-$:
 \begin{equation}\label{eq:gap}
-\ln\frac{W^{1-q}}{P}+\ln(W^q F T)=\ln\frac{WFT}{P}\quad(q\text{-independent}).
+\ln\frac{W^{1-q}}{P_+}+\ln(W^q\kappa P_-)=\ln\frac{W\kappa P_-}{P_+}\quad(q\text{-independent}).
 \end{equation}
 \end{proposition}
 Typical sets: sum $\approx9\,\sigma$ of load noise; the clinical picture (rare episodes
@@ -232,57 +247,13 @@ rarely and release quickly.} The exits: a one-sided trigger, or a variable defen
 raises its own lower boundary --- the pursued route (section~\ref{sec:defence}).
 
 \section{Computation}\label{sec:code}
-\subsection{Layout}
-\begin{center}\footnotesize
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.33\textwidth}>{\raggedright\arraybackslash}p{0.63\textwidth}@{}}
-\toprule
-File & Role\\
-\midrule
-\code{run.py} & entry point: args, criteria self-check, blocks, report, ledger\\
-\code{config/base.toml} & all run parameters ($n_{\mathrm{sel}}=2400$, 60\,d,
-$M=1600$, $J=32$, warm 16\,d, $\sigma=0.08$, $k_d=2.0$, $\sigma_v=0.10$,
-$\tau_s=2.625$\,d)\\
-\code{px/consts.py} & constants and sigmoids, sources in comments\\
-\code{px/core.py} & stationary curve, window, set sampling, vulnerability grid\\
-\code{px/sleep.py} & switch: folds, free cycle, calibration\\
-\code{px/cortex.py} & Wilson--Cowan stationary solution\\
-\code{px/model.py} & \code{simulate}: one step over all sets and scan blocks\\
-\code{px/fast.py} & fused numba kernel ($3.3\times$) + fast \code{simulate}\\
-\code{px/conf.py} & TOML config, set cache, layers, gap law, band\\
-\code{px/batch.py} & blocks, hash-dedup, per-block parallelism, block cache
-(keyed by model-source hash)\\
-\code{px/stats.py} & criteria: sign test, median bound, CV$^2$ of gaps, MDE
-adjudication, self-tests\\
-\code{px/predict.py} & analytic expectations before any simulation (risk model)\\
-\code{px/report.py} & run report and append-only \code{ledger.json}\\
-\code{px/rules/fNN.py} & one rule per file: \code{needs(cfg)}, \code{run(ctx)}\\
-\code{px/rules/_blocks.py}, \code{_meas.py} & shared block constructors; per-block summary\\
-\code{mass_core6.py} & frozen reference monolith, not used in compute\\
-\code{tests/test_regression.py}, \code{tests/test_fast.py} & bitwise checks vs.\ monolith / kernel\\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\subsection{Pipeline, blocks, rules}
-\begin{verbatim}
-python run.py --list                 # available rules
-python run.py --rules all --dry      # block/time estimate, no compute
-python run.py --rules f19            # one rule; f02,f06,f18: several
-python run.py --ledger               # accumulated verdict journal
-python tests/test_regression.py      # bitwise check vs mass_core6.py
-\end{verbatim}
-Only requested blocks are computed; identical blocks are deduplicated by hash (78
-requested $\to$ 40 unique). Block results are cached under a key containing the model
-source hash: editing the model invalidates the cache by design. Parallelisation is
-\emph{per block only}: noise is drawn for one block length and repeated over scan
-points, so blocks are strictly paired. A full run at 2400 sets $\approx3$\,h (fused
-kernel). Rule discipline: (i) blocks through shared constructors in \code{_blocks.py}
---- same block for all rules, or pairwise comparisons fall apart; (ii) every part
-through \code{stats.adjudicate}/\code{sign\_adjudicate}, which return
-``unfalsifiable'' symmetrically when the minimum detectable effect exceeds the
-threshold; (iii) every part records \code{ctx.verdict(...)} into \code{ledger.json}
-(date, block hashes) --- verdicts are never revised; defects are annotated beside the
-verdict and re-asked as a new rule on a fresh seed.
+The computation is organised around the rules: each hypothesis is one rule file, blocks
+are requested through shared constructors and hash-deduplicated (78 requested $\to$ 40
+unique), noise is drawn per block so blocks are strictly paired, and every part records
+its verdict in an append-only ledger (date and block hashes) --- verdicts are never
+revised; a defect is annotated beside the verdict and re-asked as a new rule on a fresh
+seed. Run commands and the file layout live in the repository README (linked in the
+title).
 
 \subsection{Statistics}\label{sec:stats}
 A criterion is usable only if its null value, its noise at our sample size, and its
@@ -291,24 +262,26 @@ power are known before the run:
 \mathrm{MDE}=(z_{0.95}+z_{0.80})\,\mathrm{SE}=2.4865\,\mathrm{SE};
 \end{equation}
 agreement claims use a $3\,\mathrm{SE}$ tolerance that must exceed the MDE, or the
-claim is unfalsifiable in principle. The sign test carries a \emph{mandatory direction}
-(a silent sign error once turned $p=0.038$ into $p=0.989$); medians use the one-sided
+claim is unfalsifiable in principle. The sign test carries a \emph{mandatory direction};
+medians use the one-sided
 order-statistic bound; gaps use within-set CV$^2$ (null exactly one); every criterion
-self-tests on synthetic data with known answers before any run. Analytic expectations
-\code{px/predict.py}: the log-load sits at $m_0=\ln(\mathrm{lo}\cdot
-(\mathrm{hi}/\mathrm{lo})^q)$, the barrier at $\ln(\mathrm{hi})$; an onset is a noise
-excursion over the barrier, rate $h(t)=e^{-d(t)^2/2}$ with
-$d(t)=(G-\ell(t))/\sigma$ (pre-exponential cancels in all ratios). This one model
+self-tests on synthetic data with known answers before any run. The analytic risk model
+(one model for all rules): the log-load sits at $m_0=\ln(\mathrm{lo}\cdot
+(\mathrm{hi}/\mathrm{lo})^q)$, the barrier at $\ln(\mathrm{hi})$, so the log-gap is
+$\Delta=(1-q)\ln(\mathrm{hi}/\mathrm{lo})$; an onset is a noise excursion over the
+barrier, rate $h(t)=e^{-d(t)^2/2}$ with $d(t)=(\Delta-\ell(t))/\sigma$, where
+$\ell(t)$ is the circadian rise of the log-load (piecewise linear, zero-mean over the
+day); the pre-exponential cancels in all ratios. This one model
 yields, unfitted: the late-wake onset share (F2a: $0.82$), the swing-response curve,
 the mid-scale fork (F5), the burst-trigger share (F8a), the wake-lengthening ratio from
 the deterministic switch (F4a, F6a), the affine duration law (F7, F8b). A rank
-correlation on 8 cells has error $1/\sqrt{7}=0.38$; the fix is per-set slopes with
+correlation across eight bins has error $1/\sqrt{7}=0.38$; the fix is per-set slopes with
 attenuation $\rho_{\mathrm{set}}=\rho_{\mathrm{pool}}/\sqrt{1+\lambda}$ --- in the real
 data $\lambda=33.8$ turned an MDE of $0.94$ into $0.076$ and closed four of five parts.
 
 \subsection{Reproducibility}\label{sec:repro}
-(i) \emph{Frozen monolith}: \code{tests/test_regression.py} requires the set sampling,
-band arithmetic, and \code{simulate} to match \code{mass_core6.py} bitwise on pinned
+(i) \emph{Frozen monolith}: the regression suite requires the set sampling,
+band arithmetic, and \code{simulate} to match the frozen monolith bitwise on pinned
 configurations; cross-machine comparison uses $10^{-12}$ with a machine fingerprint
 (measured worst $3\times10^{-15}$). (ii) \emph{Fused kernel}: assembled from the
 reference source by textual substitution with uniqueness checks (an edit breaks the
@@ -332,7 +305,12 @@ of broken sets, not a state.
 \section{Results}\label{sec:results}
 \subsection{The ledger}
 128 pre-registered parts across 26 rules (F2--F29): 66 passed, 48 failed, 13
-unfalsifiable, 1 below its analytic bracket (P/F/U/B in the table).
+unfalsifiable, 1 below its analytic bracket. Every rule is a pre-registered hypothesis
+split into parts; the table scores each rule by the number of parts per verdict ---
+P (passed), F (failed), U (unfalsifiable: the minimum detectable effect exceeded the
+written threshold), B (below the analytic bracket: the observation fell below the
+analytic fork, so the rule does not apply). Verdicts sit in an append-only ledger and
+are never revised.
 
 \begin{center}\footnotesize
 \begin{tabular}{@{}l p{0.50\textwidth} c@{}}
@@ -369,18 +347,28 @@ F29 & capacity loop, matched differences & 5/1/0/0\\
 \end{tabular}
 \end{center}
 
+Not in the table: F9 and F17, whose objects were removed from the model as
+unnecessary. F9 tested slow-noise termination of episodes --- the load held below the
+window boundary longer than the cell's repair time --- and failed on all four parts; the
+reading was withdrawn, and the slow load noise was dropped from the model. F17 was the
+single-cell bench choosing between priming by amplification and by accelerating the
+first stage; the acceleration was inert (the first stage is equilibrated on episode
+timescales), so only amplification entered the model, where F19 tests it in full.
+
 \subsection{Established}\label{sec:survived}
 \begin{enumerate}[leftmargin=1.2em]
 \item \emph{Duration is set by defence memory, not repair capacity.} 99.8\,\% of the
 within-set duration variance is explained by load history, 0.2\,\% by repair (exact
-decomposition, shares sum to $10^{-16}$). The law is affine:
+decomposition). The law is affine in the defence memory
+$\tau_b$ (the slow stage of the two-stage chain):
 \begin{equation}\label{eq:dur}
 \text{duration}=1.28+0.97\,\tau_b\ \text{(days)},
 \end{equation}
 fitted below 100\,h, checked at an out-of-fit 150\,h; a shared-offset saturating form
 is rejected (F16b) though the quantitative out-of-fit prediction missed its
 $2\,\mathrm{SE}$ band (F16a). Passive repair misses the two-day target by $2$--$10\times$
-(the needed memory, $\approx12$\,h, is below the first stage).
+(the needed memory, $\approx12$\,h, is several times shorter than every measured
+second-stage value, 24--88\,h).
 \item \emph{Slow defence memory makes the pre-episode precursor:} removing it lowers
 the precursor in 107 of 174 sets, $p=0.0015$; slow load noise is unnecessary.
 \item \emph{Three phases, not two.} A band of intact cells \emph{more} vulnerable than
@@ -462,7 +450,7 @@ at $k=5$\,mV the model reaches it ($kD=4.93$, $D=0.999$).
 
 \paragraph{Cell count $J$ (F13, F22).}\label{sec:J}
 Three paths: (1) the tail of the vulnerability distribution --- closed by the
-fixed-edge grid (at $J=32$ identical to the historical grid, last digit); (2)
+fixed-edge grid (at $J=32$ identical to the grid of earlier versions to the last digit); (2)
 quantisation of the episode threshold ($0.625$ at $J=8$ vs.\ $0.516$ at $J=64$) ---
 bypassed via the continuous variable; (3) the realised spread (section~\ref{sec:pop}):
 11\,\% in effective $\sigma_v$ between $J=16$ and $64$, at log-sensitivity $\approx2.5$
@@ -479,7 +467,8 @@ zero}: all claims are matched differences at equal damage level (section~\ref{se
 \paragraph{The band (F25).} On a 600-node grid: frozen defence $\Rightarrow$ exact
 monotonicity (zero violations); live defence breaks order on $11.9\,\%$ of steps, worst
 violation $0.973$ (full reversal); priming amplifies, does not cause ($A=0$:
-$0.0184$). Consequence: the closed-form damaged fraction $1-F_v(v^*)$ is illegal under
+$0.0184$). Consequence: the closed-form damaged fraction $1-F_v(v^*)$ --- $F_v$ the cumulative
+distribution of the load multiplier, $v^*$ its threshold value --- is illegal under
 live defence; any reduction needs an explicit three-configuration boundary layer.
 
 \section{Methodological lessons}\label{sec:lessons}
@@ -513,18 +502,11 @@ precursor (population filling has no own $\tau$); (vi) the free term of~\eqref{e
 ($1.3$\,d at zero memory) is unexplained by $x$; (vii) peroxiredoxin kinetics are from
 cell lines, not PV cells; (viii) dopamine and symptoms are outside the model by design.
 
-\section{Reproducibility}\label{sec:run}
-Commands and configuration: section~\ref{sec:code}. Verdicts: \code{ledger.json} with
-dates and block hashes. Reference: \code{mass_core6.py} (frozen); bitwise checks:
-\code{tests/}. Full run at 2400 sets $\approx3$\,h; always \code{--dry} first. The
-model-source hash enters the block-cache key: editing the model invalidates the cache
-by design.
-
 \smallskip
-\noindent{\small\emph{Acknowledgements.} Text and simulation code were produced with
-Claude Opus 5 and DeepSeek, as in the companion paper \code{paper.tex}; all numbers come
-from the project's own ledger, reports, and source comments; biological anchors carry
-provenance marks in the brochure \code{brochure.tex}.}
+\noindent{\small\emph{Acknowledgements.} Drafting and simulation code were assisted by
+large language models (Claude and DeepSeek). All numbers come from the project's own
+ledger, run reports, and source-code comments; biological anchors are cited in the
+bibliography.}
 
 \smallskip
 \begin{thebibliography}{9}\small
@@ -540,7 +522,7 @@ provenance marks in the brochure \code{brochure.tex}.}
 \bibitem{kil} I.~S. Kil et al., \emph{Mol. Cell} (2015).
 \bibitem{delolmo} M. del Olmo et al., \emph{Int. J. Mol. Sci.} (2019).
 \bibitem{harkness} J.~H. Harkness et al., \emph{bioRxiv} (2020), publ.\ (2021).
-\bibitem{bischoff} Bischoff et al., raw sulfiredoxin induction kinetics, \emph{Sci. Rep.}.
+\bibitem{bischoff} Bischoff et al., sulfiredoxin induction kinetics (raw data), \emph{Sci. Rep.} 9 (2019).
 \bibitem{koulakov} A.~A. Koulakov et al., \emph{Nat. Neurosci.} 5, 775 (2002).
 \end{thebibliography}
 
