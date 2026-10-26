@@ -98,5 +98,5 @@ d.set_title('г. Почему ускорение в 3,3 раза взялось 
 d.legend(frameon=False, fontsize=9, loc='center right')
 
 fig.tight_layout(pad=1.1)
-save(fig, 'fig_v5.png')
-print('fig_v5.png готов')
+save(fig, 'pics/fig_v5.png')
+print('pics/fig_v5.png готов')

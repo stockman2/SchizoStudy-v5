@@ -85,7 +85,7 @@ def draw(ax, rows, st, kmin, kmax, minw, label_all):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('csv'); p.add_argument('--out', default='tongues.png')
+    p.add_argument('csv'); p.add_argument('--out', default='pics/tongues.png')
     p.add_argument('--zoom', nargs=2, type=float, default=None)
     p.add_argument('--minw', type=float, default=0.0, help='не рисовать ступени уже этого, мВ')
     p.add_argument('--label-all', action='store_true')

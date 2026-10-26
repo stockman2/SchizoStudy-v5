@@ -90,7 +90,14 @@ The first line and the $x$-equation are measured kinetics (Selvaggio et al.\ 201
 $c$-equation is an assumption of form. The core is a two-variable reduction of the
 Selvaggio--Coelho--Salvador model \cite{selvaggio}: the thioredoxin system is in excess
 (so it collapses into an effective repair rate), peroxide is adiabatically eliminated,
-and the slow sulfiredoxin induction becomes $c$. Notation:
+and the slow sulfiredoxin induction becomes $c$. Concretely: the peroxide ODE of the full
+kinetics, $\dot u=\nu-\varepsilon u-xu/(1+u)$, is collapsed by time-scale separation
+($u$ relaxes in seconds) into the algebraic balance $\nu=\varepsilon u+xu/(1+u)$ ---
+production equals clearance. This balance is a quadratic in $u$, so at each instant the
+load $\nu$ (the model's input, not a state variable) fixes $u$ implicitly, and $u$ is
+the only channel through which $\nu$ acts on $x$ and $c$. In the simulation the per-cell
+load is $\nu=L(t)\,v_j$, with $L(t)$ the set-level load process of
+section~\ref{sec:gap} and $v_j$ the cell multiplier of section~\ref{sec:pop}. Notation:
 \begin{itemize}
 \item $e_0$: scale of the non-enzymatic clearance $\varepsilon u$; $\mu_0$: scale of
 the two-hit hyperoxidation $\mu_0 xu^2/(1+u)$ relative to repair;

@@ -109,6 +109,6 @@ d.set_title('г. Третий путь: $J$ входит как эффектив
 d.legend(frameon=False, fontsize=8.5, loc='upper right')
 
 fig.tight_layout(pad=1.2)
-save(fig, 'fig_slow.png')
-print('fig_slow.png готов; половина белка через %.0f ч; разброс J=16/32/64: %.4f %.4f %.4f'
+save(fig, 'pics/fig_slow.png')
+print('pics/fig_slow.png готов; половина белка через %.0f ч; разброс J=16/32/64: %.4f %.4f %.4f'
       % (t[i50], sd[1], sd[3], sd[5]))
