@@ -1,0 +1,15 @@
+% =====================================================================
+\section{How many cells are in the population --- and why this turned out to be a parameter}\label{sec:J}
+The number of cells $J$ was until recently chosen for computational convenience: 32 in some runs, 64 in others. It was assumed to be merely a resolution. It turned out to be a parameter, and it entered by three different routes.
+
+\begin{enumerate}
+\item \textbf{The tail of the resilience distribution.} The multipliers were taken as equiprobable quantiles $p_j=(j+1/2)/J$, so the extreme quantile drifts as $J$ grows: the more cells, the more vulnerable the most vulnerable one. \emph{Closed}: the probability grid is pinned at the ends, and at $J=32$ it coincides with the former one to the last digit, so the old runs remain valid.
+\item \textbf{Quantisation of the episode threshold.} An episode was defined as ``the fraction damaged above $1/2$'', and the fraction takes only the values $j/J$, so the actual threshold is $0.625$ at $J=8$ and $0.516$ at $J=64$. \emph{Circumvented}: verdicts are issued on a continuous variable whose threshold is not quantised.
+\item \textbf{The realised spread.} This one was found only on a sample of 2000 sets, when the measurement noise fell below the effect. The ends of the grid are pinned and indeed barely drift (the smallest multiplier is 0.8002 at $J=8$ and 0.8029 at $J=512$), but the \emph{variance} of a finite grid is smaller than the one specified and approaches it only in the limit: $\mathrm{std}(\ln v)=0.1226\,/\,0.1060\,/\,0.0980\,/\,0.0943$ at $J=8/16/32/64$, and $0.0910$ in the limit (fig.~\ref{fig:slow}d). From $J=16$ to $J=64$ this is 11\,\% in the effective sigma of the spread, and the model is extremely sensitive to it.
+\end{enumerate}
+
+The third route explains the dependence found quantitatively and indicates the correction: stretch the grid so that the realised spread equals the one specified for any $J$. The decisive check is written down before the computation: a block at $J=32$ with a substituted sigma is obliged to reproduce a block at $J=16$ with the ordinary one. If it does, the route is explained in full.
+
+\begin{ineq}
+A general lesson, not about our model. Discretisation of a continuous distribution by $J$ points can \emph{exactly} preserve the mean (by normalisation) and \emph{exactly} pin the ends (by the choice of the extreme quantiles) and still fail to preserve the variance: for a grid uniform in probability, $\mathrm{Var}\to\sigma^2$ only as $O(1/J)$ from below. If a model is sensitive to the variance of the spread --- and here the logarithmic sensitivity is about 2.5 --- then the number of grid points becomes a parameter of the model, and runs with different $J$ cannot be compared: that is a comparison of two different models.
+\end{ineq}

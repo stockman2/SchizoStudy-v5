@@ -1,0 +1,23 @@
+% =====================================================================
+\section{How we compute now}\label{sec:method}
+A rule is fixed before the computation; this was so from the start. Version~4 added the second half of it: \emph{every criterion must have a known null value, a known noise level at our number of sets, and a known power}. Otherwise a verdict speaks about the sample and not about the model.
+
+Formally: a part of a rule is deemed verifiable only if the distance from the null value to the threshold is no less than the minimum detectable effect
+\[\mathrm{MDE}=(z_{0.95}+z_{0.80})\,\mathrm{SE}=2.4865\,\mathrm{SE}.\]
+Otherwise the verdict is ``unverifiable'', and \textbf{symmetrically}: both where the rule would have failed and where it would have passed. Beside it is printed how many sets are needed for the threshold to become detectable. For claims of the form ``the observation is consistent with the prediction'' the tolerance is taken as 3\,SE: it must be wider than the MDE, otherwise such a claim is irrefutable in principle.
+
+This is not a formality: four rules turned out to be unverifiable at any number of sets, because they were measured over eight cells, where the error of the rank association equals $1/\sqrt{7}=0.38$ while the threshold was set at $-0.5$. This is cured not by the sample but by subdividing the cells.
+
+\textbf{Four statistical traps found along the way}, each of which cost a run of its own:
+\begin{enumerate}
+\item \emph{The median across sets of the fraction of rare events} is always 0 or 1: it collapses to zero as soon as fewer than half the sets have any events. Three rules fell on this, not on the model.
+\item \emph{The fraction of short intervals} is identically $1+\mathrm{CV}^2$ over the sets' rates and sees no physics at all. Replacement: the $\mathrm{CV}^2$ of the intervals \emph{within} a set, where under a refractory period $\mathrm{CV}^2=(1-t_r/g)^2$ and the null is exactly one.
+\item \emph{The direction of a sign test}: one and the same function applied to ``smaller is better'' and ``larger is better'' gave $p=0.99$ where the correct direction gave 0.038. The direction is now a mandatory argument, and the self-check runs both.
+\item \emph{Zero error by construction}: the column ``in units of the set's own healthy level'' equals one for every set in the healthy cell, the spread is zero, and any verdict was declared significant.
+\end{enumerate}
+
+\textbf{Reproducibility.} The computation is distributed across files: the model, the statistics, the rules, the block assembler. Each rule \emph{declares} which blocks it needs; identical blocks of different rules are merged by hash and computed once (of 78 requested, 42 are computed). The result of a block is placed in a cache whose key includes the hash of the model's source code: an edit to the model devalues the cache by itself, and old blocks are not mixed into new ones. A separate test requires \emph{bitwise} agreement with the former monolith at pinned points. Verdicts are written to the ledger with the date and the block hashes and are not revised after the computation: the unfitness of a rule is noted beside it rather than corrected after the fact.
+
+\begin{ineq}
+A useful small point which was expensive here. The range of $n$ values of a quantity with relative error $r$ is itself a random variable: for three independent values $\mathrm{E}[\text{range}]=1.693\,r$. A threshold ``the spread over $J$ is no more than 10\,\%'' is therefore meaningful only for $r<0.059$. At 300 sets $r=12$\,\%, so the rule was unverifiable; at 2000 it became verifiable --- and immediately failed, revealing the third route by which $J$ enters the model.
+\end{ineq}

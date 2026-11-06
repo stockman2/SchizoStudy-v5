@@ -1,0 +1,78 @@
+% =====================================================================
+\section{Additional results}\label{sec:supp}
+\figp{fig_results.png}{\label{fig:res}Four results that are visible without preparation. The numbers are medians over several hundred random parameter sets.}
+
+The working arrangement is as follows: before anything is computed, a rule is formulated --- what exactly must come out, and with what number --- and only then is the computation launched. A rule may not be rewritten after the result has been seen; it may only be declared unfit, with a statement of why. Below are all the rules of the project and what came of them.
+
+\begin{table*}[p]\small\centering
+\begin{tabular}{@{}R{0.04}R{0.30}R{0.32}R{0.27}@{}}
+\toprule
+ & \textbf{what was checked} & \textbf{what came out} & \textbf{verdict}\\
+\midrule
+F1 & damage leads the defence by 1/8--1/4 of a period & 0.162 & satisfied, but the rule judged almost empty\\
+F2a & collapses accumulate towards the second half of waking & 0.88 against 0.50 at random; analytic expectation 0.82 & satisfied, and in agreement with the derivation\\
+F2b & there is a threshold in the daily range & 1.5-fold growth, no break & \textbf{not satisfied}\\
+F2b$'$ & the curve lies on the smooth prediction without a gate & worst deviation 0.55 against a tolerance of 0.04 & \textbf{not satisfied}: neither a gate nor a smooth hazard\\
+F2c & sleep rarely interrupts an episode & 0.51 against a uniform expectation of 0.35 & \textbf{not satisfied}: sleep interrupts \emph{more} often than at random\\
+F3a & damage impedes falling asleep and lengthens the episode & 1.67-fold against a threshold of 1.5 & satisfied\\
+F3a$'$ & \dots and by exactly as much as waking lengthens & observation 1.67 against 1.10 for the switch & unverifiable; the amplification is real and requires explanation\\
+F3c & episodes shorter than a day are rare & 0.13 over all episodes against a threshold of 0.50 & satisfied\\
+F4a & sleep deteriorates before the collapse threshold & 1.085 against a threshold of 1.10 and a switch expectation of 1.114 & \textbf{not satisfied}, and below the mechanical expectation\\
+F4b$'$ & the precursor exists relative to each set's own level & 1.055 against a threshold of 1.05 & satisfied\\
+F5 & the fraction damaged has become smooth & 0.038 against a threshold of 0.05 and a derivation bracket of 0.069--0.139 & \textbf{not satisfied, and below the bracket}: hysteresis removes the intermediate states\\
+F6a & waking lengthens before the collapse & 1.055, inside the mechanical bracket & satisfied\\
+F6b,d & the slope of the precursor curve & $-0.62$ over eight cells, MDE 0.94 & unverifiable at any sample size: the cells must be subdivided\\
+F6c$'$ & slow noise raises the precursor (paired) & $p=0.97$ & \textbf{not satisfied}: the noise has nothing to do with it\\
+F7a & the episode is no longer than two days & 4.39 days & \textbf{not satisfied}\\
+F7a$'$ & the duration follows the law of F16 outside the fit & miss of 0.22 days against a tolerance of 1.5 & satisfied\\
+F7b & there exist episodes shorter than a day & 0.28 over all episodes against a threshold of 0.30 & \textbf{not satisfied}\\
+F8a & the collapse is caused by a serotonin surge & 0.24 against a threshold of 0.80 and a derivation expectation of 0.36 & \textbf{not satisfied}: the threshold was a requirement on the selection\\
+F8b,c & the surge changes the properties of the episode & 7.2 days; short ones 0.12 & \textbf{not satisfied}\\
+\bottomrule
+\end{tabular}
+\caption{Pre-registered rules of the project, part one: the core, the day, the episode and the serotonin surge.}
+\end{table*}
+
+\begin{table*}[p]\small\centering
+\begin{tabular}{@{}R{0.04}R{0.30}R{0.32}R{0.27}@{}}
+\toprule
+ & \textbf{what was checked} & \textbf{what came out} & \textbf{verdict}\\
+\midrule
+F10a & the recovery tail is related to the depth of damage & rewritten for the present model, awaiting a run & written before the computation\\
+F10b,c & the episode is the time of high load, not the repair & provisionally 0.87 and a tail of 7\,\% & written before the computation\\
+F11 & induction closes the episode & the association of induction strength with duration is weaker than the threshold & \textbf{not satisfied}\\
+F12 & the defence creates a refractory period & by the intervals between episodes, no & \textbf{not satisfied}\\
+F13 & the response does not depend on the number of cells & ranges 0.21 and 0.24 against noise ceilings of 0.055 and 0.042 & \textbf{not satisfied}: $J$ is a parameter, not a resolution\\
+F14 & the memory of the defence is masked by noise & two parts out of three & partially\\
+F15 & a refractory period exists and is not due to the defence & $t_r=1.0\dots1.4$ days, both controls passed & satisfied\\
+F16 & the duration law predicts outside the fit & miss of 10\,\% against a tolerance of 2\,SE & satisfied\\
+F16c & the law is affine, not saturating & the straight line beat both saturating forms & satisfied\\
+F18b$'$ & the precursor is made by the memory of the defence (paired) & falls in 107 sets, $p\le0.05$ & satisfied\\
+F18b$''$ & \dots and makes it entirely & only a fifth of the excess goes away & \textbf{not satisfied}: there is a third slow quantity\\
+F19 & priming brings the episode to the target & 1.46 days, bound 1.665, $p=5.2\cdot10^{-6}$ & \textbf{satisfied, all four parts}\\
+F20 & the rhythm breaks at strong coupling & locking staircase 1:1 $\to$ 5:4 $\to$ 3:2 $\to$ 2:1 $\to$ 3:1 $\to$ 4:1 $\to$ no sleep & satisfied; this is a staircase, not a period-doubling cascade\\
+F20e & there exist regimes with alternating cycle lengths & patterns 25,\,24,\,24,\,47 and 47,\,25 and 46,\,26,\,24\,h & satisfied; the working region does not reach them\\
+F21 & the third slow quantity is the filling of the population & written before the computation & awaiting a run\\
+F22 & $J$ enters through the effective spread of the grid & the arithmetic of the grid confirmed; the check by substituting sigma written down & awaiting a run\\\\
+\bottomrule
+\end{tabular}
+\caption{Pre-registered rules of the project, part two: the tail, the refractory period, the duration law, the slow defence, priming and the population.}
+\end{table*}
+
+\subsection{Comparison with published numbers}
+Separately from the rules there are checks in which the model is obliged to reproduce someone else's result. This is not a success of the model but a condition of admission to work: if it does not agree, no further computation is permitted.
+
+{\small
+\begin{tabular}{@{}R{0.34}R{0.28}R{0.30}@{}}
+\toprule
+\textbf{quantity} & \textbf{our computation} & \textbf{in the paper}\\
+\midrule
+folds of the sleep switch & 1.450 and 2.463\,mV & 1.45 and 2.46\,mV\\
+waking / sleep / period & 15.50 / 8.50 / 24.00\,h & 15.5 / 8.5 / 24.0\,h\\
+range of the sleep pressure & 0.527 & 0.50\\
+spread of sleep duration & 0.67\,h & 1.12--1.29\,h (with the daily routine)\\
+integration step against an exact solver & discrepancy $3\cdot10^{-7}$ & ---\\
+\bottomrule
+\end{tabular}}
+
+The range of the sleep pressure in the third row was not fitted at all: the time constants are taken from one paper, the construction of the switch from another, and the agreement came out by itself. This is the weightiest of the checks.

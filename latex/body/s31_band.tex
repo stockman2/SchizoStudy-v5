@@ -1,0 +1,21 @@
+% =====================================================================
+\section{Three phases: the rescued band}\label{sec:band}
+The cells of one set differ in exactly \emph{one} scalar --- the load multiplier $v$; everything else is common to them. So the state of a cell is a one-parameter family $x(t;v)$ under a common load history. Were this family monotone in $v$, the damaged cells would always be a clean tail $\{v\ge v^*\}$, the damaged fraction would be computed in closed form as $1-F_v(v^*)$, and the per-cell block would not be needed at all.
+
+\textbf{Monotonicity does not hold, and what breaks it is the slow defence.} On a fine grid of 600 nodes in $v$ under three load profiles, including a deliberately adversarial one, the measurements are:
+\begin{itemize}[leftmargin=1.1em,itemsep=1pt,topsep=2pt]
+\item with the second stage \emph{frozen}, monotonicity is exact: zero violations, the largest exactly $0.000$;
+\item with a live defence the ordering breaks on 11.9\,\% of the steps, the largest violation being 0.973 --- that is, a complete reversal: the more vulnerable cell is intact while the less vulnerable one has collapsed;
+\item priming is not the cause but an amplifier: at $A=0$ the violation remains but falls from 0.973 to 0.0184;
+\item the ordering is preserved in no coordinate: $s$ --- 27.8\,\% of the steps, $m$ --- 32.5\,\%, the priming trace --- 32.7\,\%, the total defence --- 100\,\%.
+\end{itemize}
+
+\textbf{The mechanism.} The more vulnerable cell is oxidised earlier, is primed more strongly, accumulates more protective protein --- and by the time a large excursion arrives it has \emph{more} defence than its less vulnerable neighbour. This is hormesis at the level of the population: part of the cells survive precisely because they suffered earlier.
+
+\textbf{There turned out to be three phases.} The boundary layer is not smeared but connected: in a pilot its width held at 0.085 of the population as a structure. In the production computation at $J=32$ the width of the band (the fraction of intact cells lying above the first damaged one) equals $0.00732\pm0.00042$ --- seventeen sigmas from zero. The cause was named correctly and verified: with the defence \emph{frozen} the band becomes exactly \emph{zero}; with priming switched on it is 1.82 times wider ($0.01331$); and a short memory of the second stage does not change it at all ($0.00712$ against $0.00732$).
+
+\begin{ineq}
+The shape of the band was predicted by geometry: the boundary layer must follow $\varphi(\Phi^{-1}(1-D))$, that is, be widest at $D=1/2$. \textbf{The prediction is refuted, twice over and with different signs.} Over the scan of the sleep coupling the rank association is exactly $-1$: the band \emph{narrows} as the damaged fraction grows, from $0.0135$ at $D=0.10$ to $0.0021$ at $D=0.34$. Over an independent scan of the daily range, which was not opened for this question, it is exactly $+1$: the band \emph{widens}, from $0.0095$ at $D=0.064$ to $0.0191$ at $D=0.162$. The ranges overlap, and at one and the same damaged fraction the width differs twofold depending on \emph{which knob} was used to change that fraction (fig.~\ref{fig:v5}c). The claim about the shape is withdrawn in full, as had been recorded in advance.
+\end{ineq}
+
+\textbf{What this means for the theory.} A closed formula for the damaged fraction in terms of a single boundary is illegitimate with a live defence. The per-cell block may be simplified only with an \emph{explicit} boundary layer --- three configurations, not two. And the width of that layer is not determined by the observable damaged fraction: it is set by something third, most probably the time the population has spent right at the tipping point.

@@ -1,0 +1,21 @@
+% =====================================================================
+\section{Three more traps, and the absence of an absolute null}\label{sec:null}
+The list of statistical traps grew to ten, and the last three were found on our own rules rather than in the literature. Each of them had already produced a false verdict once before it was recognised.
+
+\begin{enumerate}[start=8,leftmargin=1.9em,itemsep=3pt]
+\item \textbf{A threshold the chosen statistic cannot reach.} A part of a rule required $p\le0.05$ from an exact permutation test over three scan points. That test's smallest attainable one-sided $p$ is $1/n!$, which at $n=3$ equals $0.167$: the threshold could not have been met by any behaviour of the model. The price is visible in the part that recorded $\rho=+1.000$ --- perfect monotonicity --- as ``not satisfied'' (section~\ref{sec:cap}). It is a relative of the sixth trap: both say that a criterion must be checked for \emph{feasibility} before the computation, not only for meaningfulness. The check is now built in: if the attainable $p$ exceeds the threshold, the part is declared unverifiable rather than failed.
+\item \textbf{The nearest element of a grid that does not bracket.} A comparison against ``the same mean magnitude'' took the nearest grid point, and the grid ended before the value sought. The answer obtained was about the end of the grid. This trap is silent always, because a ``nearest'' element exists for any grid. The remedy is of two parts: the grid must bracket on both sides, and the agreement tolerance must be assigned before the computation from the construction of the scan --- half the smallest grid step --- so that failure to bracket makes the part unverifiable.
+\item \textbf{The range of several noisy values is itself a random variable.} For $n$ independent values with relative error $r$, the expected range is a multiple of $r$ --- for three values, $1.693\,r$. A threshold ``the spread over $J$ is no more than 10\,\%'' is therefore meaningful only for $r<0.059$. At 300 sets $r=12\,\%$, so the rule was unverifiable; at 2000 sets it became verifiable --- and immediately failed, revealing the third route by which $J$ enters the model (section~\ref{sec:J}).
+\end{enumerate}
+
+\textbf{The central methodological result of the project is not a trap but a structural statement, and it applies to any model of this kind.} In a model with absorbing states and a heterogeneous population, \emph{there is no absolute null for any measure of accumulation}. A damaged cell does not recover on its own; over a long enough record the accumulation measure drifts upwards in the open model too, so ``no effect'' does not correspond to zero. Three consequences follow, and all three were paid for.
+
+\begin{itemize}
+\item A rule that tests an accumulation measure against zero cannot fail: the only question is how long the record is. The verdict it issues is about the length of the run.
+\item Worse, the converse: a \emph{false} null passes not by being true but by lack of power. The rule reports ``satisfied'' and the defect is invisible from inside, because a null that cannot be violated is never violated.
+\item Hence the construction that replaced it: every part of the rule is a \emph{matched difference}. The loop against a static equivalent levelled on the first half of the same record, paired within a set, on the same sid. The null of a matched difference is zero by construction, whatever the absorbing states do, because whatever they do they do on both sides.
+\end{itemize}
+
+\begin{ineq}
+The general form of the statement. Let $D(t)$ be a measure of accumulation in a system with an absorbing set $A$ and a population heterogeneous in a parameter $v$. For every $v$ with positive hazard, $\mathrm{P}(x(t;v)\in A)\to1$, so $\mathrm{E}\,D(t)$ is non-decreasing and its limit is set by the fraction of the population with positive hazard, not by the mechanism under test. A test of $\mathrm{E}\,D(T)>0$ therefore has power tending to one against \emph{any} alternative, including the null one, as $T$ grows. The only quantities whose null is a fixed number are differences between two arms sharing the same absorbing dynamics --- which is why the comparison, and not the measurement, is the unit of evidence here.
+\end{ineq}

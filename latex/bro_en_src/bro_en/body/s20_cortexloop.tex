@@ -1,0 +1,18 @@
+% =====================================================================
+\section{The cortex in the loop}\label{sec:loop}
+For the circle to close, a model of the cortex is needed --- a crude one at least. We take two groups of cells: excitatory, and inhibitory PV cells. Each is described by one number, the mean firing rate. The excitatory cells drive themselves and the inhibitory ones; the inhibitory cells damp both.
+
+Damage enters here as a single quantity: the output weights of the inhibitory cells are multiplied by a factor which falls with the fraction damaged. At complete loss, inhibition drops to 60\,\% of its original value --- this number is taken from a study in which such a loss was modelled.
+
+What this coupling gives: when inhibition falls to 60\,\%, the activity of the excitatory cells rises by 19\,\%. The load on the remaining inhibitory cells rises by the same amount. This is the closed circle, and its strength is not a fitted number but a consequence of two taken from the literature.
+
+\facts
+\begin{itemize}
+\item Neural-mass models in which the inhibitory weight is itself a variable with an equation of its own exist in the literature; so does the fall of inhibition to 60\,\% of its original value under loss of PV cells.\tP
+\item The factor is applied to all output weights of the inhibitory group at once rather than to one: this is how it was done in the study that analysed PV loss specifically.\tP
+\item No models linking a cell's metabolism to a neural mass could be found. The circle ``over-excitation $\to$ damage to metabolism $\to$ less inhibition $\to$ over-excitation'' is described in the literature in words, without equations.\tS
+\end{itemize}
+
+\begin{note}
+The cortex is taken here in a steady state: its own time scales are tens of milliseconds, that is, thousands of times faster than everything else. For this reason the gamma rhythm is deliberately absent from this version: what is needed is the mean firing rate, on which metabolism depends. The regime with oscillations is a separate problem.
+\end{note}

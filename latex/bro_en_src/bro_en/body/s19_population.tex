@@ -1,0 +1,23 @@
+% =====================================================================
+\section{From one cell to a population}\label{sec:pop}
+\fig{fig_population.png}{A single cell has two states and nothing in between. Cells differ in resilience, so the fraction damaged changes smoothly --- but the hysteresis loop is preserved.}
+
+So far the discussion has been about a single cell. But there are many inhibitory cells in the cortex, and a population behaves differently from any of its cells.
+
+A single cell with two states is a switch: either healthy or damaged, with nothing intermediate. This is visible in the computation as well: over the whole run a single cell spent about one per cent of the time in the middle of the damage scale. That is, it has no slow deterioration at all: only a jump.
+
+If the cells differ slightly in resilience --- and they do --- then under a growing load they break not all at once but in turn. The fraction broken grows smoothly. The hysteresis loop does not go anywhere: for the cells to return, the load must be lowered below the one at which they broke. The result is a smooth quantity that has retained memory --- something a single cell does not have.
+
+There is a subtlety here which forbids simply averaging. If one takes a population of independent cells and computes the mean, smoothness comes out ``from nothing'' --- purely from averaging, without any mechanism. For this reason the cells in the model are coupled through what couples them in the cortex: through network activity. Fewer working inhibitory cells, weaker inhibition, higher excitation, higher load on those remaining. The circle closes in fact and not in words.
+
+\facts
+\begin{itemize}
+\item The mean over a population of bistable units with scattered thresholds changes smoothly and preserves hysteresis.\tP
+\item The intrinsic heterogeneity of the population does not collapse into a single mean-field equation: what is needed is the fraction broken, not the mean state.\tP
+\item Computation: for a single cell 0.9--1.3\,\% of the time falls in the middle of the scale; for a population of 32 cells, about 5\,\%.\tD
+\item A negative result. The smoothness is produced by the spread of resilience and not by the coupling through the network: with the narrowest spread it almost vanishes. The hope that the circle ``activity $\to$ load $\to$ damage $\to$ inhibition $\to$ activity'' would itself create intermediate states was not borne out.\tD
+\end{itemize}
+
+\begin{ineq}
+Formally: a population of identical bistable elements has the same bifurcation diagram as a single element. A spread of a parameter smears both folds into an interval, and the fraction of elements in the upper state becomes the distribution function of the thresholds --- a step function with step $1/J$, monotone and hysteretic. A common coupling through the mean field adds a positive feedback to this, so it can narrow the interval back or even restore a discontinuous transition.
+\end{ineq}

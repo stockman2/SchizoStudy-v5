@@ -1,0 +1,20 @@
+% =====================================================================
+\section{The switch}
+\fig{fig_switch.png}{Left: the steady fraction of the switched-off enzyme as a function of the peroxide influx (computed from the simplified equation; parameters chosen for clarity). Right: the same picture as a surface.}
+Peroxiredoxin neutralises a molecule of peroxide by being oxidised itself, and returns to its working state within seconds. But if a second molecule of peroxide reaches the already oxidised enzyme in time, the enzyme is \emph{hyperoxidised} and switched off for a long time. It is repaired by a separate enzyme, \emph{sulfiredoxin}, and slowly.
+
+Hence a positive feedback: the more peroxide, the more enzyme is switched off; the less working enzyme, the worse the clearance and the more peroxide. If the coupling is strong enough, the cell acquires two stable states at one and the same load: ``defence working'' and ``defence off'' (fig.~6).
+\facts
+\begin{itemize}
+\item Repair of the hyperoxidised enzyme takes from 3 minutes to an hour in human cells.\tS
+\item In mitochondria repair works differently: there is almost no sulfiredoxin there at rest. It is imported after peroxide leaves the mitochondria, reaches a maximum in 4--8 hours and is degraded once repair is complete.\tS
+\item A detailed model of this system (Selvaggio et al., 2018; parameters measured for 15 cell types) yields two stable states for only one cell line and in a narrow range of loads.\tS
+\item Reducing that model to a single equation gives an exact criterion for two states. The measured cells lie at the very boundary, but outside it: to move inside, repair must be weakened by a factor of 1.6--22.\tD
+\item The threshold for cell death is sharp: doubling the peroxide dose takes cells from full survival to almost complete death.\tS
+\end{itemize}
+\begin{note}
+Ordinary cells are \emph{not} in the region of two states. For the switch to work, the defence must be weakened. The hypothesis asserts that this is the case in PV cells with a weak NMDA receptor; there are no direct measurements for these cells. The kinetics of the enzyme have been measured in cell lines, not in neurons.
+\end{note}
+\begin{ineq}
+This is a pair of folds (saddle-node bifurcations) with hysteresis: collapse and recovery occur at different loads. Inside the window a transition is possible only under a perturbation --- a push or noise (section~12). The width of the window and the height of the barrier are the quantities that have to be estimated quantitatively.
+\end{ineq}

@@ -1,0 +1,44 @@
+% =====================================================================
+\section{The conservation law for the gaps}\label{sec:law}
+\fig{fig_gaps.png}{An episode begins when the load is thrown above the top of the window, and ends when it goes below the bottom. The sum of the two jumps does not depend on where in the window the mean load sits.}
+
+This is the principal result the model produced not as a number but as a prohibition.
+
+The picture of the disease that has to be obtained: episodes are rare and last from hours to several days. So a collapse must be hard and a return easy. In the model both are done by one and the same random fluctuation of the load: upwards it throws the system over the upper boundary of the window, downwards it returns it below the lower one.
+
+And here a simple thing comes to light. The distance up and the distance down, measured in the logarithm of the load, sum to the width of the window --- and to nothing else. Shift the mean load down and the collapse becomes far away, but the return becomes near; shift it up and the reverse. The sum does not change.
+
+For a typical parameter set this sum is about nine standard deviations of the noise. The picture of the disease requires three deviations upwards (so that collapses are rare) and one and a half downwards (so that the return takes a day) --- four and a half in all. Nine does not fit into four and a half.
+
+The conclusion is hard and independent of the parameters: \textbf{as long as collapse and return are done by one and the same noise, there will be no rare episodes with a fast return.} Any numbers may be turned; it will not help.
+
+What follows from this. An asymmetry is needed: collapse and return must be governed by different things. Two routes are already visible, and both are testable.
+
+\begin{itemize}
+\item \textbf{A one-sided trigger.} A serotonin surge raises the load and never lowers it. The upward gap is then covered by the surge, while the downward gap is left to the ordinary noise, and the two distances are measured by different distributions.
+\item \textbf{Variable defence.} If after a load the cell strengthens its repair, the lower boundary of the window itself moves upwards, and the return occurs without a large excursion. The law then ceases to bind from the other end --- it was derived on the assumption that the boundaries of the window stand still.
+\end{itemize}
+
+\facts
+\begin{itemize}
+\item Activation of the 5-HT2A receptor raises the firing rate of cortical excitatory cells roughly twofold; the pathway is confirmed by the effect being abolished both by blockade of the receptor and by blockade of the intracellular link. This is a pharmacological maximum, not an ordinary surge.\tP
+\item Duration of the acute action of substances working through this receptor: 6--7\,h and 10--11\,h, with onset after 0.4--0.8\,h.\tP
+\item The peroxiredoxin repair enzyme is up-regulated by activity: mRNA 13.5-fold in 4 hours, the protein by one day. The rate of the reverse decay has not been measured in any of the papers read.\tS
+\end{itemize}
+
+\subsection{A refinement that was not borne out}
+In version~3.1 an explanation stood here: that an episode fails to end because a random dip in the load is too short --- the cell repairs itself over about a day, whereas the fast component of the noise persists for two hours. Two predictions followed from it: the dependence of episode duration on the correlation time of the noise should have a minimum near the repair time, and lengthening the fast component should shorten the episode.
+
+Verified in a separate run. \textbf{Both predictions proved false.} There is no minimum at all: the duration grows monotonically, and the shorter the noise the shorter the episode, all the way to the edge of the scan. Lengthening the fast component does not shorten the episode but lengthens it --- from 3.4 to 7.9 days. The explanation is withdrawn.
+
+What remains in its place is a measured dependence, without an explanation:
+\[\text{duration} \;\propto\; \tau^{1/4}\,\sigma^{2/3},\]
+where $\tau$ is the correlation time of the noise and $\sigma$ its strength. The exponent of $\tau$ came out the same for both components, slow and fast: 0.254 and 0.243, over ranges of values of 40-fold and 33-fold. Such an agreement itself calls for an explanation, but to give one before verification would be a repetition of the same error.
+
+A practical conclusion follows at once. At a correlation time of six hours the episodes come out at 1.5 days, and more than half of them are shorter than a day --- precisely the picture we were after. But the sleep precursor described in section~\ref{sec:supp} requires noise with a time of several days: otherwise there is simply nothing for it to arise from. Both things cannot be obtained from one source of randomness. Hence the episode must end not at the will of the noise but of itself --- and this is one more argument in favour of variable defence.
+
+\begin{ineq}
+Let $W$ be the ratio of the window's boundaries, $q$ the position of the mean load within it on a logarithmic scale, $F$ the feedback factor at complete damage, and $P$ and $T$ the daily peak and trough. Then
+\[\underbrace{\ln\frac{W^{1-q}}{P}}_{\text{to collapse}} + \underbrace{\ln\big(W^{q} F T\big)}_{\text{to return}} = \ln\frac{W F T}{P},\]
+and the right-hand side does not depend on $q$. The statement is elementary --- it is the addition of two logarithms --- but it constrains any model of this construction: a bistable unit under a noisy load cannot simultaneously have a high entry barrier and a low exit barrier. Hence the requirement of an asymmetric mechanism.
+\end{ineq}

@@ -1,0 +1,31 @@
+% =====================================================================
+\section{The capacity loop: episodes rarer but longer}\label{sec:cap}
+The load loop failed structurally, and the cause pointed at the repair: a loop must act \emph{per cell}, so that a damaged cell loses something its neighbour does not. The capacity of the defence is such a quantity. While a cell is damaged its capacity $N_0$ is drawn towards $N_0(1-a_n)$ with a fast constant, and on recovery returns to $N_0$ with a slow one. The damaged cell loses capacity, the neighbouring one does not --- the population stays heterogeneous, and the episodes have somewhere to live.
+
+\facts
+\begin{itemize}
+\item This part is measured: oxidative damage to PV cells lowers parvalbumin itself, tears the perineuronal net and strikes the mitochondria.\tS
+\end{itemize}
+
+The depth to which the load is removed stands as an \emph{axis of the scan and not as a constant}: in the pilot the answer about hysteresis moved from 0.037 to 0.648 depending on how deeply the load was lifted. A constant would have given an answer about the measurement regime rather than about the model.
+
+\textbf{The falsifier broke, and taking it apart gave more than the pilot itself.} Four defects were found, two of them in our computation and two in the construction of the rule.
+
+\begin{enumerate}
+\item \emph{The kernel diverged from the reference, and not one pin touched it.} The fused kernel aimed at the raw $N_0$ instead of the reduced capacity $N_0\cdot n_0$. The reference gave exactly $0.85\,N_0$, the kernel $0.88886\,N_0$: the capacity crept back towards the unreduced value with the fast constant. The defect appeared \emph{only} for $n_0<1$, and all the pins ran at $n_0=1$, where the two agree identically. Two pins were added --- a static capacity, and a static capacity together with the loop (they multiply inside the relaxation target, and that is exactly where the error was invisible) --- and it was verified that the new pins \textbf{fail} without the correction: 52 fields of 67 diverge, the largest discrepancy being $3.2\cdot10^{33}$. A pin that passes before the fix is worth nothing.
+\item \emph{The cache outlived the kernel.} The kernel source was not part of the code-version hash, so an edit to the kernel did \emph{not} devalue the block cache. Corrected, at a stated and one-off price: 96 cached blocks devalued, one full recomputation needed.
+\item \emph{Two thresholds were unattainable by construction.} Two parts required $p\le0.05$ from an exact permutation test over \emph{three} scan points. The smallest one-sided $p$ attainable from that test is $1/n!$, which at $n=3$ is $0.167$: the threshold could not have been met by any behaviour of the model. The price is visible in one of them: $\rho$ came out at exactly $+1.000$ --- perfect monotonicity, the model behaving exactly as predicted --- and the part was recorded as ``not satisfied''. That is a false accusation against the model for failing a check that cannot be passed. Corrected two ways at once: the grids were widened to five points (smallest attainable $p=0.0083$, the span of the scan unchanged), and a check of attainability was built into the rule --- if $1/n!>0.05$ the part is honestly declared \emph{unverifiable} rather than failed.
+\item \emph{The comparison point was taken as the ``nearest'' element of a grid that did not bracket it.} The falsifier compares the loop against a static reduction of the capacity \emph{of the same mean magnitude}. The loop reached a capacity of 0.694 of the baseline while the grid ended at 0.85: the rule silently took the extreme point (0.632 against 0.444) and issued a verdict anyway. The answer obtained was about the depth of the reduction, not about the loop. Corrected: the grid was widened to 0.60--1.0 and now brackets with margin on both sides; the agreement tolerance was assigned \emph{before} the computation from the construction of the scan --- half the smallest grid step in capacity (wider, and ``agreement'' stops being agreement; narrower, and it is unattainable on any grid); and failure to bracket makes the part unverifiable rather than failed.
+\end{enumerate}
+
+\textbf{The rule rebuilt.} The replacement rule contains no test against zero at all: every part is a \emph{matched difference} --- the loop against a static equivalent levelled on the first half of the record, paired within a set, on the same sid. The verdicts: the machine control reproduces the analytic expectation $\mu\langle N_0\rangle$ to $1.9\cdot10^{-13}$; progression over the matched static is $+0.0231$ at an MDE of $0.0096$, and it replicates on three independent noise realisations ($+0.0223$ and $+0.0211$); retention under the softest release is 0.561 and grows with the softness monotonically; episodicity holds at 0.753 of the open model. One part did not pass: the course of the hazard over the matched static, $1.937$ --- it is recorded as not satisfied, and no cheap rescue for it exists.
+
+\textbf{What the loop does.} It does not make collapses more frequent; it makes them longer. The duration goes $13.1\to25.6$ days while the rate falls $0.042\to0.033$ per set-day at risk, and the two move in opposite directions by construction of the measurement, not by fitting.
+
+\begin{note}
+The honest caveat: $25.6$ days lies far above the clinical two days, so the working point of the loop is overstated. What is comparable here is the \emph{direction and the ratio}, not the magnitude. This matters for how the prediction of section~\ref{sec:pred} is to be read: in longitudinal cohorts, as damage accumulates the episodes should become rarer and longer, not more frequent.
+\end{note}
+
+\begin{ineq}
+The methodological lesson is wider than the rule. Identity of the fused kernel with the reference is a \emph{claim that is verified}, not a property that holds: the area of the verification equals the area of the pins, and a hole in it is invisible from inside --- it becomes visible only when a rule asks the model about something the pins never asked. And a cache must live exactly as long as the engine that filled it: a cache cannot verify identity, so it is not entitled to assume it.
+\end{ineq}

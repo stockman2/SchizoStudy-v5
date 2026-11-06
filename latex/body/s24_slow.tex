@@ -1,0 +1,27 @@
+% =====================================================================
+\section{Slow defence: what was added and what it did}\label{sec:slow}
+\figp[0.88\textwidth]{fig_slow.png}{\label{fig:slow}Four results of version~4. \textbf{a} --- the two stages of the defence: the induction signal is fast, the protein slow, and half the level is reached only by the third day. \textbf{b} --- the law of episode duration: it turned out to be a straight line rather than a saturating curve, and a test point outside the fit confirmed this. \textbf{c} --- the locking staircase: the rotation number stands at rational values and jumps; the inset shows the alternation pattern of cycle lengths on the fractional step 5:4. \textbf{d} --- the number of cells enters the model as an effective spread of resilience.}
+
+The conservation law for the gaps (section~\ref{sec:law}) left exactly two ways out, and the second of them is variable defence: if after a load the cell strengthens its repair, the lower boundary of the window moves upwards by itself and the return does not require a large excursion of the noise. It is this way out that we built up.
+
+\textbf{What exactly was added.} The peroxiredoxin repair enzyme (sulfiredoxin) is not up-regulated instantaneously: first an induction signal accumulates, and then the protein is synthesised from it. These are two first-order stages in series:
+\[\dot m=\frac{1}{\tau_m}\Big(\beta\frac{u}{K_B+u}-m\Big),\qquad \dot s=\frac{1}{\tau_s}\,(m-s),\]
+where $u$ is the peroxide, $m$ the signal and $s$ the accumulated protein, which adds to the constant defence. The steady state is the same as before: the window, its boundaries and the whole conservation law for the gaps are unchanged. Only the time course changes --- and it is precisely the time course that decides everything.
+
+\textbf{Where the constants come from.} The time of the first stage is taken from the mRNA: 8.1--9.6\,h in three independent treatments.\tS\ That of the second from the protein, from the raw data of the same laboratory: a peak at hour 18, while the decay constant has never been measured in the published work, and comes out at anything from 24 to 88\,h depending on the method of processing.\tS\ The working value of 63\,h is the middle of that range, and it is our assumption, not a measurement.\tD\ The induction strength is drawn across sets: the measured fold change of protein accumulation runs $\times$2.1 / 2.7 / 4.2 / 7.0 at four oxidant doses.\tS
+
+\textbf{What came of this --- and this is the principal negative result of the version.} The episode duration turned out to be a \emph{linear} function of the memory of the defence (fig.~\ref{fig:slow}b):
+\[\text{duration}\;=\;1.28\;+\;0.97\,\tau_{\rm d}\quad\text{(days)},\]
+with no saturation whatever. The functional form was not chosen by eye: three candidates were fitted to the points with memory below 100\,h, and the prediction was tested at the point 150\,h, which was not in the fit. The straight line beat both saturating forms, both on the residual of the fit and on this test.
+
+Hence a consequence that closes an entire route. For the episode to fit within the clinical two days, a defence memory of about 12 hours is needed --- that is, \emph{less than that of the first stage}, and several times less than any of the measured values (24--88\,h). Passive defence does not miss the target by a hair's breadth: it is excluded by a factor of 2 to 10. Strengthening the repair does not in itself shorten the episode but lengthens it --- because the longer the accumulated protein persists, the longer the cell sits in an intermediate state instead of falling back quickly.
+
+\begin{ineq}
+Two first-order stages in series give the response to a step in the load
+\[s(t)=1-\frac{\tau_s e^{-t/\tau_s}-\tau_m e^{-t/\tau_m}}{\tau_s-\tau_m},\]
+that is, always with an inflection: there is no instantaneous response for any constants. For $\tau_m=12$\,h and $\tau_s=63$\,h half the level is reached by hour 57 (fig.~\ref{fig:slow}a). This is the reason why what must be accelerated is not the first stage but the \emph{gain}: the derivative of the response with respect to $\tau_m$ at the working point is small (on a single cell the acceleration gave $-1$ to $-5$\,\%), whereas that with respect to the amplitude is large ($-52$\,\%). The prediction was written down before the computation and was confirmed.
+\end{ineq}
+
+\begin{note}
+From the fact that the defence lengthens the episode in the model it does \emph{not} follow that sulfiredoxin is harmful. One thing follows: a defence that only repairs what has been damaged does not explain the picture of the disease. It can be explained only by a defence that acts \emph{earlier and more strongly} --- that is, by priming (section~\ref{sec:prime}).
+\end{note}

@@ -1,0 +1,21 @@
+% =====================================================================
+\section{The sleep switch}\label{sec:sleep}
+\fig{fig_sleepswitch.png}{Left: two nuclei inhibit each other, so two states are possible at one and the same input. The arrows are the transitions at the folds. Right: the ``sleep pressure'' accumulated over the day under one and the same schedule.}
+
+The load on a cell is not constant: by day the brain works, by night it rests. For this to enter the model honestly, the sleep schedule must not be imposed by hand --- sleep has to come out by itself.
+
+It works as follows. There is a ``sleep'' nucleus and there are wake nuclei; they inhibit each other. Such a pair behaves as a trigger: at one and the same external input it has two stable states, and the system stays in whichever one it finds itself. The transition happens not when some threshold is crossed, but when the branch the system was sitting on simply ceases to exist --- such a point is called a fold.
+
+The input to the sleep nucleus is governed by two things: an internal clock with a period of about a day, and the ``sleep substances'' accumulated during waking. The latter grow while one is awake and decline during sleep. When they become sufficient, the upper branch disappears and one falls asleep; when over the night they become low, the lower branch disappears and one wakes.
+
+\facts
+\begin{itemize}
+\item The model of the pair of nuclei and all nine of its numbers were taken from the paper in full and were not tuned. Check: our folds came out at 1.450 and 2.463\,mV, against 1.45 and 2.46 in the paper; the free-running cycle gave 15.5\,h of waking, 8.5\,h of sleep, a period of 24.0\,h.\tS
+\item Time constants of the sleep substances: rise 18.2\,h, decay 4.2\,h. The decay is more than three times faster than the rise --- sleep restores faster than waking loads.\tS
+\item In the original paper a single constant of 45\,h stood for both directions. The sawtooth is then almost straight and, more importantly, sleep restores at exactly the rate at which waking loads, which cannot be. After the substitution, the range of the sleep substances came out at 0.527 against 0.50 in the authors of the two-process model --- and this agreement was not fitted by anyone.\tD
+\item The night-to-night spread of sleep duration in humans: 1.29\,h by actigraphy (26\,121 nights), 1.12\,h by EEG, 0.54\,h by self-report.\tP
+\end{itemize}
+
+\begin{ineq}
+A mutually inhibiting pair yields an S-shaped curve of steady states; the middle branch is unstable, the outer ones stable. The transitions are saddle-node bifurcations at the ends of the middle branch. The slow variable (the sleep substances) creeps along the curve and drops the system off the fold; this is a relaxation oscillator entrained by an external periodic term. What matters is that the position of the folds is a property of the fast subsystem, not a threshold that could be assigned.
+\end{ineq}

@@ -1,0 +1,19 @@
+% =====================================================================
+\section{How a model comes out of this}
+\fig[0.86\textwidth]{fig_model.png}{The core of the model. A sharp arrow is enhancement, a bar at the end suppression. The colour indicates how well the link is founded.}
+Ready-made computational models exist for the edges of the picture. The fast consequences for the network of a loss of parvalbumin and GAD67 have been modelled (Volman et al., 2011); so has the kinetics of peroxiredoxin (Selvaggio et al., 2018), as well as its daily oscillation outside the brain (del Olmo et al., 2019). No model of the damage loop itself --- receptor, oxidants, inhibitory cell --- was found in the literature by the authors of the project.\tS
+
+The core of the project's model has two variables (fig.~10): a fast one $x$, the fraction of working peroxiredoxin, and a slow one $c$, the level of defence maintained by the work of the receptor. The peroxide concentration $u$ is obtained from an algebraic balance with the influx $\nu$:
+\begin{align*}
+&\nu = \varepsilon u + \frac{x\,u}{1+u},\quad \varepsilon = e_0 c^{\gamma},\qquad N = \frac{N_0}{1 + u/K_N},\\
+&x' = c^{m}(1 - x) - \mu_0\,\frac{x\,u^2}{1+u},\\
+&c' = \frac{1}{T}\Big(N + \frac{\beta u}{K_B + u} - c\Big).
+\end{align*}
+The first line and the equation for $x$ are derived from the measured kinetics. The equation for $c$ is an assumption about the functional form: the link ``receptor $\to$ defence'' itself is described in the literature. Time is measured in units of the enzyme's repair time; $T$ is the ratio of the lifetime of the protective proteins to it. The parameter $N_0 < 1$ represents a congenitally weak receptor.
+\subsection{What has been computed}
+\begin{itemize}
+\item The slow link through the receptor widens the window of two states: the median ratio of its boundaries grows from 1.46 to 1.88; in 10.5\,\% of random parameter sets two states appear only because of it.\tD
+\item A negative result. The core does not produce the asymmetry ``lost quickly, recovered slowly'' and does not reproduce the two-dose ketamine experiment: it has no memory between doses. Adding glutathione and feedback through network activity did not correct this.\tD
+\item In 4.6\,\% of sets the core gives undamped ``damage--recovery'' oscillations with a period of about $3.4\,T$. Damage leads the defence by 0.16 of a period --- less than a quarter, as it must be for a first-order element; the shift observed for sulfiredoxin, from a third to a half of a period, is inaccessible to the core.\tD
+\item With random fluctuations of the load, the law ``the barrier decays as the distance to the edge to the power $3/2$'' and the formula for the mean waiting time of a transition were confirmed by computation. The barriers turned out to be high for fast noise.\tD
+\end{itemize}

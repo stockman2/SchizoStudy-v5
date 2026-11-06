@@ -1,0 +1,11 @@
+% =====================================================================
+\section{What an episode consists of}\label{sec:tail}
+All the other rules measure the duration \emph{between} sets. But for the choice of a mechanism what matters more is what the duration is made up of \emph{within} a set. An episode divides into two parts: the time during which the load stays above the top of the window, and the \textbf{tail} --- the time from the last such moment to the end of the episode, when the load is already normal but the cells are still damaged.
+
+This distinction decides what the defence can get hold of at all. If the tail is large, repair is limiting, and it is repair that must be accelerated. If there is almost no tail, the episode lasts exactly as long as the high load persists, and repair is not limiting at all.
+
+On the earlier version of the model (still without the two-stage defence) the tail occupied a quarter of the episode, and the association of duration with the time of high load was 0.94. A preliminary check on the \emph{present} model gives a sharper picture: association 0.87, tail about 7\,\% of the episode.\tD\ If this is confirmed on the full sample, the conclusion will be hard: \textbf{priming shortens the episode not by repairing faster but by raising the top of the window}, and thereby shortening the time of high load itself. This is a testable prediction, and it was written down before the computation.
+
+\begin{note}
+The earlier measurement of the tail was made on a model without the two-stage defence, and it cannot be carried over to the present one: it is precisely the defence that moves the boundaries of the window. The rule has therefore been rewritten, and the episode recorder is \emph{compared bit for bit} with the main computation on the same rows and the same sid: if a copy of the step diverges in even one episode, the rule declares itself unverifiable and prints no numbers.
+\end{note}

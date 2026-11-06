@@ -1,0 +1,19 @@
+% =====================================================================
+\section{Mean field: what follows from it and what will not}\label{sec:mf}
+The structure of the model looks like an invitation to mean field: all-to-all coupling through two scalars (the damaged fraction and the mean damage) which enter only the sleep switch. An analysis by method gives the following picture.
+
+\textbf{Hartree, ordinary mean field.} Does not work, and it is now known why: the damaged fraction is not a function of the mean but a functional of the distribution, and precisely at the threshold, where the distribution is bimodal because of the bistability of the redox switch. There is nothing to average there.
+
+\textbf{Dynamical mean field (DMFT).} Formally \emph{exact}: all-to-all coupling through a scalar is infinite dimensionality, and in the limit $J\to\infty$
+\[D(t)=\mathrm{P}\big(v:\;x(t;v)<x_{\text{thr}}\big)\]
+with no approximation whatever. The limit exists and has been measured: the corrections from the realised spread of the grid converge as $1/J$, and extrapolation from the last two points gives 0.1101. But DMFT by itself yields no economy: it reduces the problem to a single-cell one plus a quadrature over $v$, and the whole cost moves into the number of quadrature nodes.
+
+\textbf{Level set.} Would give a complete solution --- one boundary instead of $J$ cells. Dead with a live defence, \emph{exactly correct} with a frozen one (section~\ref{sec:band}).
+
+\textbf{Born--Oppenheimer.} The separation of scales is real: 63 hours against the fast relaxation. On the fast scale the damaged fraction is closed and the slow variable moves the boundary --- but it moves it \emph{unequally across cells}, and hence the band.
+
+\textbf{Multiconfiguration approximation.} The route that is needed, and the number of configurations is now known from measurement: three, plus two moving boundaries.
+
+\begin{note}
+\textbf{Decision on application: the reduction is not to be used as a speed-up.} The gain is estimated at three- to fourfold (32 nodes against 8--12) against a run that already fits in three hours. The price is an edit to the model which cannot be checked by identity, which voids the base of verdicts and which requires a convergence study in $J$ of its own. And, most importantly, the reduction would coarsen precisely the boundary layer, that is, the one new phenomenon. What pays off at once and for free is the closed level-set formula with a frozen defence as a source of \emph{analytic expectations}: the model is not touched, the cache is not devalued, and the thresholds acquire a derivation from expectations and variances.
+\end{note}

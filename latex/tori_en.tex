@@ -1,0 +1,174 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage[margin=2.0cm]{geometry}
+\usepackage[expansion=false]{microtype}
+\usepackage{enumitem,amsmath,amssymb,booktabs,titlesec,amsthm}
+\usepackage[hidelinks]{hyperref}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=2pt}
+\setlength{\parskip}{2pt}\emergencystretch=2em
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.4em}{}
+\titlespacing*{\section}{0pt}{8pt plus 1pt}{3pt}
+\newtheorem{prop}{Proposition}
+\begin{document}
+\begin{center}
+{\large\bfseries The circle map of the sleep switch in closed form}\\[2pt]
+{\small Appendix to the report on the falsification programme. 30 October 2026.}
+\end{center}
+\vspace{-2pt}
+
+\noindent\textbf{Summary.} The sleep--wake layer of the model reduces \emph{exactly} to a relay with
+hysteresis, and its return map admits a closed form up to two transcendental equations. This yields:
+the folds of the fast subsystem in explicit parametric form ($1.4503$ and $2.4635$\,mV against
+$1.450/2.463$ in the model); the free-running period in closed form; the edge of the $1{:}1$ tongue
+as the solution of a system of three equations, with no scan. It also settles the question of
+invariant tori: there are \emph{none} in the window, and the proof is an inequality on the Lyapunov
+exponent rather than a parameter scan. A by-product is that the Arnold-tongue framework does not
+apply to this system at all: the map is piecewise smooth and does not cover the circle.
+
+\section{Reduction to a relay with hysteresis}
+The fast pair of nucleus voltages ($\tau\approx10$\,s) is eliminated adiabatically against the
+somnogen time scales (18.2 and 4.2\,h). Its steady state admits a \emph{parametric} solution: taking
+$V_m$ as the parameter,
+\begin{equation}\label{eq:par}
+Q(V_v)=\frac{A_m-V_m}{|\nu_{mv}|},\qquad V_v=Q^{-1}\!\Bigl(\frac{A_m-V_m}{|\nu_{mv}|}\Bigr),\qquad
+D_v(V_m)=V_v-\nu_{vm}Q(V_m),
+\end{equation}
+with $Q^{-1}(q)=\theta+\sigma_Q\ln\bigl(q/(Q_{\max}-q)\bigr)$. The folds are the extrema of
+$D_v(V_m)$. Evaluating~\eqref{eq:par}: $D_-=1.4503$\,mV (sleep branch, $Q(V_m)=0.75$) and
+$D_+=2.4635$\,mV (wake branch, $Q(V_m)=3.45$), against the $1.450$ and $2.463$ quoted in the model
+as a check against the source publication. The agreement to four significant figures is obtained
+\emph{without integration}.
+
+In the limit $\tau\to0$ the system is a relay: the somnogens obey linear equations with closed-form
+solutions, and switching occurs at two \emph{moving thresholds}
+\begin{equation}\label{eq:thr}
+g_\pm(t)=\frac{D_\pm-B_0+\kappa-\nu_{vc}\cos\bigl(2\pi(t-\alpha)/24\bigr)}{A_G},
+\qquad \kappa=k\,D .
+\end{equation}
+
+\begin{prop}[Return map]\label{prop:map}
+Let $t_n$ be a sleep onset. Then $t_{n+1}=f(t_n)$ is given implicitly by
+\begin{equation}\label{eq:map}
+g_+(t_n)\,e^{-(t_w-t_n)/\tau_s}=g_-(t_w),\qquad
+1-\bigl(1-g_-(t_w)\bigr)e^{-(t_{n+1}-t_w)/\tau_w}=g_+(t_{n+1}),
+\end{equation}
+where $t_w$ is the wake onset. Both equations are of the form ``exponential $=$ sinusoid''. The map
+is smooth wherever the crossing is transversal and loses smoothness where it is tangential; the
+latter condition is the critical locus.
+\end{prop}
+
+\section{Free period and the delayed-bifurcation correction}
+For $\nu_{vc}=0$ the thresholds are constant and~\eqref{eq:map} is solved explicitly:
+\begin{equation}\label{eq:per}
+T_s=\tau_s\ln\frac{g_+}{g_-},\qquad
+T_w=\tau_w\ln\frac{1-g_-}{1-g_+},\qquad T_0=T_s+T_w .
+\end{equation}
+Substitution gives $T_s=1.337$\,h, $T_w=6.683$\,h, $T_0=8.020$\,h. Direct integration at zero
+amplitude gives $8.878$\,h, a discrepancy of 10\,\%. The cause is identified and is not an error of
+derivation: switching does \emph{not} occur at the fold. Sleep onset is observed at $D_v=2.5026$
+against the fold at $2.4635$, and wake onset at $1.3794$ against $1.4503$: the system overshoots the
+fold, because the relaxation time diverges at a saddle-node and a slow passage completes after the
+bifurcation point. The overshoot was measured over two decades in the fast time scale and vanishes
+with exponent $0.64$ and $0.59$, against the value $2/3$ for slow passage through a saddle-node.
+Hence~\eqref{eq:per} is the \emph{exact} $\tau\to0$ limit and the model stands 10\,\% away from it;
+when analytic thresholds are used this offset must be stated rather than concealed.
+
+\section{The 1:1 tongue edge without a scan}
+The $1{:}1$ orbit is a fixed point of $f$ shifted by one day. The tongue edge is its saddle-node:
+\begin{equation}\label{eq:edge}
+f(t^*)=t^*+24,\qquad f'(t^*)=1,
+\end{equation}
+which together with~\eqref{eq:map} gives three equations in $(t^*,t_w,\kappa)$ and determines
+$\kappa_{\mathrm{edge}}$ to machine precision. Numerical bisection on a locking criterion gave
+$4.7651$\,mV; an independent scan of the rotation number (rule~F20) gave $4.77$\,mV; the difference
+is $0.005$\,mV.
+
+\section{No invariant tori: the exponent is bounded away from zero}
+\textbf{The map is not defined everywhere.} The somnogens rise towards unity from below, so sleep
+onset is possible only where $g_+(t)<1$. The fraction of the day satisfying this is
+\begin{center}\small
+\begin{tabular}{lccccc}
+\toprule
+$\kappa$, mV & 0 & 2 & 4.80 & 5.10 & 5.18\\
+fraction of the day admitting sleep onset & 0.789 & 0.531 & 0.166 & 0.077 & 0.016\\
+\bottomrule
+\end{tabular}
+\end{center}
+At $\kappa\approx5.18$ this fraction vanishes, which is how sleep is lost. At $\kappa=4.80$ the
+domain is the arc $[10.014,\,13.986]$\,h of length $3.97$, and the image is the arc
+$[10.846,\,11.839]$ of length $0.993$, contained in the domain.
+
+It follows immediately that the Arnold-tongue framework \textbf{does not apply}. A degree-one circle
+map has an image covering the whole circle; here the image occupies 4\,\% of it. The map is
+piecewise smooth with discontinuities: at $\kappa=4.88$ the jump is $22.47$\,h against a median step
+of $10^{-4}$\,h, that is, almost exactly one day. This is a skipped night. \emph{The locking
+staircase is generated by branch switching, not by mode locking of a smooth circle map.}
+
+\textbf{The correct quantity is the exponent along the orbit.} The maximum of $|f'|$ over a grid is
+not suitable: at tangential crossings the derivative has a square-root singularity, and a grid
+samples points the attractor never visits. Iterating~\eqref{eq:map} and discarding the transient:
+\begin{center}\small
+\begin{tabular}{lcccccc}
+\toprule
+$\kappa$, mV & 4.78 & 4.82 & 4.88 & 4.94 & 5.00 & 5.10\\
+$\lambda$ along the orbit & $-3.17$ & $-3.01$ & $-3.24$ & $-3.34$ & $-3.54$ & $-2.53$\\
+rotation number $\rho$, days & 1.0000 & 1.5000 & 2.0000 & 2.0000 & 2.0000 & 2.0000\\
+\bottomrule
+\end{tabular}
+\end{center}
+Over the whole window $\lambda$ lies between $-1.62$ and $-3.54$. Two conclusions follow, both as
+inequalities rather than observations. \emph{Chaos is excluded}: it requires $\lambda>0$. \emph{A
+smooth invariant torus is excluded}: a quasiperiodic attractor requires $\lambda=0$ exactly, whereas
+here the distance to zero is at least $1.6$. The attractor at every parameter examined is a strongly
+attracting periodic orbit. The rotation numbers $1$, $3/2$, $2$ reproduce the staircase of rule~F20,
+which is a third independent confirmation of the reduction, after the folds and after the tongue
+edge.
+
+\textbf{What a grid could not do.} In its first edition, part~(zh) of rule~F30 asserted that a
+locked fraction below unity on a grid implies that tori occur on a parameter set of positive
+measure. The inference is invalid. The complement of the locked set is \emph{dense}, so a finite
+grid finds unlocked nodes whether the complement has positive measure or measure zero, and misses
+them in both cases with a probability depending only on the resolution: the criterion has no power
+in either direction. The honest content of the outcome ``240 of 240 nodes locked'' is a lower bound
+on the measure of the locked set, $0.988$ at 95\,\% confidence, and nothing more.
+
+Reaching the correct quantity required discarding two incorrect ones: first the locked fraction on a
+grid, then the maximum of $|f'|$ over the domain. The general lesson: on a Poincar\'e section, a
+quantity averaged \emph{along the orbit} and a quantity taken over the \emph{whole domain} answer
+different questions, and the latter need not concern the attractor at all.
+
+\textbf{Measure in phase space is a different question and does not arise here.} All of the above
+concerns \emph{parameter} space. The measure of the attractor itself --- a thick attractor of
+positive Lebesgue measure, whose dimension equals that of the system --- belongs to a different and
+substantially harder circle of problems (Ilyashenko constructed examples for step skew products).
+The present system sits at the opposite pole, and this is measured rather than assumed. The fast
+time scales (10\,s) against the slow ones (hours) give a strongly negative divergence, and the two
+fast dimensions collapse immediately: control~F30(a) established one-dimensionality of the return
+map to $4.5\times10^{-13}$, eight trajectories from different initial somnogen values falling onto a
+single curve to machine precision. The one-dimensional map then contracts onto a periodic orbit with
+$\lambda\le-1.6$, so the attractor on the section is a finite set of points and, in the extended
+phase space, a closed curve. This is structural: approaching thickness would require the divergence
+to cease being negative somewhere, that is, the fast time scales to become comparable to the slow
+ones --- but the entire reduction to a relay, and with it the folds and the circle map, rests on
+their separation.
+
+\section{Consequences for computation}
+Constructing the map from~\eqref{eq:map} requires two scalar roots per cycle instead of 1600
+integration steps per day, and the tongue edge from~\eqref{eq:edge} requires solving three equations
+instead of a bisection. The F30 run took 1686\,s; the analytic route yields the same numbers in
+seconds, up to the 10\,\% threshold offset stated above. This applies in particular to part~(e),
+which the run returned as untestable: the exponent along the orbit is obtained in twelve iterations
+of the map and answers its question directly, whereas a grid of 240 nodes could not answer it in
+principle, since it searched for aperiodic nodes where the attractor is periodic at every parameter.
+
+\smallskip\noindent\textbf{Open points.} (i)~The overshoot exponent converged to $0.59$--$0.64$
+against the theoretical $2/3$; the asymptotic regime was not reached, and either a further decade in
+the fast time scale is needed or the correction contains a logarithm. (ii)~The exponent along the
+orbit was computed at twelve values of $\kappa$; formally this does not exclude exceptional
+parameters carrying a Denjoy-type Cantor minimal attractor. The argument against is structural
+rather than statistical: such an attractor also requires an exponent at zero, and the exponent
+nowhere rises above $-1.6$. (iii)~The separation of branches of the map was performed by thresholding
+the jump size and is not reliable; the number of branches is deliberately not quoted. (iv)~All of the
+above concerns the deterministic switch with frozen damage; with live damage and load noise the
+question of attractors does not arise in this form.
+\end{document}

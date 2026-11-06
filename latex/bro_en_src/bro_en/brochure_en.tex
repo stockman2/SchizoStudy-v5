@@ -1,0 +1,145 @@
+% ============================================================================
+% Schizophrenia for a mathematician — English edition, expanded.
+% Compiles with xelatex. Fonts live in fonts/, figures alongside.
+% The evidence-tag macros keep their original names (\tU \tS \tP \tD) and only
+% the printed letter changes, so the body text translates without touching tags.
+% ============================================================================
+\documentclass[11pt,a4paper,landscape,twocolumn]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}\setotherlanguage{russian}
+\newcommand{\optserif}{Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Ligatures=TeX}
+\newcommand{\optsans}{Path=fonts/,Extension=.otf,UprightFont=*-Regular,BoldFont=*-ExtraBold,ItalicFont=*-Italic,BoldItalicFont=*-ExtraBoldItalic,Ligatures=TeX}
+\newcommand{\optmono}{Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic,Scale=0.9,Ligatures=TeX}
+\setmainfont{LiberationSerif}[\optserif]
+\setsansfont{Inter}[\optsans]
+\setmonofont{LiberationMono}[\optmono]
+\usepackage[a4paper,landscape,left=1.8cm,right=1.8cm,top=1.7cm,bottom=1.9cm,columnsep=1.0cm]{geometry}
+\usepackage{graphicx,xcolor,amsmath,array,booktabs,enumitem,titlesec,fancyhdr,caption}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\definecolor{cB}{HTML}{2A78D6}\definecolor{cO}{HTML}{C9501F}\definecolor{cA}{HTML}{12875C}\definecolor{cY}{HTML}{A87200}
+\definecolor{cM}{HTML}{5A6472}
+\definecolor{pA}{HTML}{EAF7F1}\definecolor{pY}{HTML}{FCF4DD}\definecolor{pB}{HTML}{EDF3FB}
+\raggedright\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}\emergencystretch=2em
+\titleformat{\section}{\sffamily\Large\bfseries\color{cB}}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{16pt}{6pt}\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=2pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.6em,itemsep=3pt,topsep=2pt,parsep=0pt}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[C]{\sffamily\small\color{cM}\thepage}
+\captionsetup{font={small,sf},labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=false,skip=4pt}
+% Evidence tags: T textbook, R read in a paper, V verified by search, O our own.
+\newcommand{\tU}{\textsuperscript{\sffamily\bfseries\color{cM}T}}
+\newcommand{\tS}{\textsuperscript{\sffamily\bfseries\color{cB}R}}
+\newcommand{\tP}{\textsuperscript{\sffamily\bfseries\color{cA}V}}
+\newcommand{\tD}{\textsuperscript{\sffamily\bfseries\color{cO}O}}
+\newtcolorbox{note}{colback=pA,colframe=pA,boxrule=0pt,arc=2pt,left=8pt,right=8pt,top=5pt,bottom=5pt,before skip=8pt,after skip=8pt}
+\newtcolorbox{ineq}{colback=pY,colframe=pY,boxrule=0pt,arc=2pt,left=8pt,right=8pt,top=5pt,bottom=5pt,before skip=8pt,after skip=8pt}
+\newcommand{\fig}[3][\textwidth]{\begin{figure*}[t]\centering\includegraphics[width=#1]{#2}\caption{#3}\end{figure*}}
+\newcommand{\figp}[3][\textwidth]{\begin{figure*}[p]\centering\includegraphics[width=#1]{#2}\caption{#3}\end{figure*}}
+\renewcommand{\dbltopfraction}{0.9}\renewcommand{\dblfloatpagefraction}{0.75}\renewcommand{\textfraction}{0.05}
+\newcommand{\Hp}{H\textsubscript{2}O\textsubscript{2}}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1\linewidth}}
+\newcommand{\facts}{\par\vspace{3pt}{\sffamily\bfseries\small\color{cM}Supporting facts}\par\vspace{-2pt}}
+\raggedbottom
+\begin{document}
+\twocolumn[{%
+{\sffamily\bfseries\fontsize{24}{28}\selectfont\color{cB} Schizophrenia for a mathematician\par}
+\vspace{4pt}
+{\sffamily\large The whole picture, from molecule to symptom\par}
+\vspace{2pt}
+{\sffamily\small\color{cM} Companion brochure to a project on a model of damage to cortical inhibitory cells. Version 6.0 (English, expanded), 3 November 2026.\par}
+\vspace{14pt}}]
+
+This brochure is written for a reader who is at home with dynamical systems but has not worked in biology and has not read the literature on the subject. Its aim is to give a connected picture: what processes run inside a cell and inside a network of cells, on what time scales, and where in that picture the nonlinearity appears that allows the illness to begin abruptly. Detail is deliberately sparse: every statement is given at the level needed to understand the next one.
+
+The sections are built alike. First the principle in plain words. Then a short list of supporting facts with provenance tags. At the end, a box ``For the mathematician'': which mathematical object describes the thing.
+
+\subsection{How to read the tags}
+\begin{tabular}{@{}l@{\ \ }p{0.9\linewidth}@{}}
+\tU & textbook knowledge: standard, written from memory, not separately checked;\\
+\tS & taken from a paper read by the project's authors (figures from working notes);\\
+\tP & verified by search while preparing the brochure, from an abstract, preprint or review;\\
+\tD & an assumption or a calculation of our own, not present in the literature in this form.\\
+\end{tabular}
+
+All figures are our own diagrams, drawn for this brochure.
+
+\subsection{Contents}
+{\small
+\begin{tabular}{@{}r@{\ \ }l@{\quad}r@{\ \ }l@{}}
+1 & The whole picture on one page & 23 & Additional results\\
+2 & The illness: what has to be explained & 24 & Slow defence\\
+3 & Time scales & 25 & Priming\\
+4 & The cell in five minutes & 26 & The precursor: what produces it\\
+5 & Neuron and synapse & 27 & What an episode consists of\\
+6 & The cortex: excitation and inhibition & 28 & How many cells are in the population\\
+7 & The NMDA receptor & 29 & How the rhythm breaks\\
+8 & Oxidants and defence & 30 & Asymmetric defence\\
+9 & The switch & 31 & Three phases: the rescued band\\
+10 & Loops and the developmental window & 32 & Mean field\\
+11 & The day and sleep & 33 & Burstiness of the load\\
+12 & Noise & 34 & The dopamine loop: a latch\\
+13 & Dopamine and psychosis & 35 & The capacity loop\\
+14 & A neighbouring hypothesis: BDNF & 36 & The sleep switch solved on paper\\
+15 & How this is known & 37 & How we compute now\\
+16 & Evidence: humans and animals & 38 & Accuracy and verifiability\\
+17 & How a model comes out of this & 39 & Three more traps, no absolute null\\
+18 & The sleep switch & 40 & What the model predicts\\
+19 & From one cell to a population & 41 & What we hold beyond dispute\\
+20 & The cortex in the loop & 42 & Open questions\\
+21 & The conservation law for the gaps & 43 & Glossary\\
+22 & What the model has already failed to do & 44 & Sources\\
+\end{tabular}}
+
+Sections 1--17 are biology and have changed little between versions. Sections 18--23 describe how the model is built now and what it has already managed to forbid; sections 24--33 cover the slow defence and priming, the attribution of the precursor, the composition of an episode, the number of cells as a parameter, the breakdown of the rhythm, the three phases of the population and what mean field will and will not give. Sections 34--40 are new in this edition: the two feedback loops and their verdicts, the closed-form solution of the sleep switch, the method as it now stands, and the list of what the model predicts that can be measured.
+
+
+% ===================== BODY =====================
+\input{body/s01_picture}
+\input{body/s02_disease}
+\input{body/s03_timescales}
+\input{body/s04_cell}
+\input{body/s05_neuron}
+\input{body/s06_cortex}
+\input{body/s07_nmda}
+\input{body/s08_redox}
+\input{body/s09_switch}
+\input{body/s10_loops}
+\input{body/s11_day}
+\input{body/s12_noise}
+\input{body/s13_dopamine}
+\input{body/s14_bdnf}
+\input{body/s15_howknown}
+\input{body/s16_evidence}
+\input{body/s17_model}
+\input{body/s18_sleepswitch}
+\input{body/s19_population}
+\input{body/s20_cortexloop}
+\input{body/s21_law}
+\input{body/s22_fail}
+\input{body/s23_supp}
+\input{body/s24_slow}
+\input{body/s25_prime}
+\input{body/s26_prodrome}
+\input{body/s27_tail}
+\input{body/s28_J}
+\input{body/s29_bifur}
+\input{body/s30_asym}
+\input{body/s31_band}
+\input{body/s32_mf}
+\input{body/s33_burst}
+\input{body/s33a_dopamine}
+\input{body/s33b_capacity}
+\input{body/s33c_analytic}
+\input{body/s34_method}
+\input{body/s35_prec}
+\input{body/s35a_null}
+\input{body/s35b_predictions}
+\input{body/s36_solid}
+\input{body/s37_crit}
+\input{body/s38_glossary}
+\input{body/s39_sources}
+
+\end{document}

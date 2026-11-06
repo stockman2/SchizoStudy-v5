@@ -1,0 +1,29 @@
+% =====================================================================
+\section{The dopamine loop: a latch, not a knob}\label{sec:dopa}
+Dopamine appeared to have been cut out of the model, while the results remained reasonable. The premise turns out to be wrong: dopamine is not cut out but \emph{bracketed at both ends}. Its contribution to the oxidative load sits inside the constant influx (catabolism of dopamine yields peroxide); its action on the balance of excitation and inhibition is carried by the activity itself through the ratio $E/E_r$; and Grace's loop takes as its input exactly what the model has at its output. A feedback loop was in the model already --- carried by glutamate: damage $\to$ disinhibition ($g=1-0.4\,D$) $\to$ a rise of $E/E_r$ $\to$ a rise of the load $\to$ damage.
+
+The one argument for adding it was not ``it exists in the brain'' but a measured failure: the working region does not reach the locking staircase. The pilot showed that this argument too is wrong --- but the loop turned out to be substantive for a different reason.
+
+\textbf{What was added.} One scalar, a tone $d$, driven by the damaged fraction itself (Grace's loop runs from the damage through the hippocampus and the VTA, bypassing local cortical activity), with a constant $\tau_d$, and back into the load as a factor $(1+a\,d)$. At $a=0$ the loop is open and the model is reproduced \emph{bitwise}.
+
+\facts
+\begin{itemize}
+\item The direction is confirmed: catabolism of dopamine yields peroxide; in Gclm-knockout mice, blockade of dopamine reuptake during postnatal development --- but not in adulthood --- produced a persistent fall in PV-cell density. The vicious circle is described as a ``dynamic feed-forward loop'' in a review in Molecular Psychiatry.\tP
+\item But there is \emph{not one} quantitative value: neither the rate of ROS formation from dopamine, nor the time constant of the loop. The effects are described in the words ``permanent'', ``long-term'', ``persistent'', and are tied to the developmental window.\tS
+\end{itemize}
+
+\textbf{Verdicts (2400 sets).} (a) satisfied: the fraction of irreversibly broken sets is 0.7076 with the loop against 0.0829 without, at an MDE of 0.037. (b) \textbf{not satisfied}: $-0.2924$ --- the loop breaks \emph{fewer} sets than its static equivalent (factor 8, the loads matched to 87\,\%), which breaks 1.000 against the loop's 0.708. (c) satisfied: under the two-phase protocol the loop releases 0.0024 of the broken sets against 0.9936 for the open model. (d) \textbf{not satisfied} --- the price, and it is heavy.
+
+\textbf{The substantive conclusion: the loop is neither a knob nor an amplifier but a \emph{latch}.}
+\begin{itemize}
+\item \emph{Not a knob}: a knob gives no hysteresis. The open model, when the load is removed, releases \emph{all} the broken sets ($0.9936\to0.0000$ exactly); the loop at $a=10$ releases 0.24\,\%.
+\item \emph{Not an amplifier}: it breaks \emph{less} than its static equivalent, because it is selective --- its factor is high only in cells already damaged and stays near unity in healthy ones.
+\item \emph{A latch with nucleation}: at a load factor of 0.6 the open model breaks \emph{exactly zero} sets, whereas the loop breaks 2.3\,\% at $a=3$ and 3.7\,\% at $a=10$, having raised the load from 0.161 to 0.285 by itself. A random dip latches permanently where the static load does not suffice at all.
+\item \emph{Dose dependence}: at $a=3$ it releases 3.8\,\%, at $a=10$ only 0.24\,\%. So below there is a critical strength at which the latch does not yet engage.
+\end{itemize}
+
+\textbf{Is there a window where hysteresis is already present and episodes are still present?} That is the clinical picture --- a chronic disease with exacerbations --- and the question was posed as a separate rule, valuable in either direction. The answer is \textbf{no}. The latch engages at a loop strength of 1.11 and the episodes die out at 0.18: a sixfold gap, and a structural one. Monotonicity of both quantities in the strength is confirmed ($0.9958$), so there is nothing between them to look for; the control at strength zero gives retention of exactly 0.0; and under a softer breaking protocol the latch merely moves to 0.98 without opening a window.
+
+\begin{ineq}
+The cause is named and it is not a matter of parameters. The load is a quantity \emph{per set} --- one for all the cells --- so a loop through it moves the whole population at once, and what the population loses is precisely its heterogeneity, the only thing that gave episodes somewhere to live (section~\ref{sec:pop}). A loop of this kind therefore describes not the disease but its irreversible outcome. The time constant $\tau_d=1$ day is not taken from the literature, and the rule was built so that the answer does not depend on it: it asks about the \emph{difference} from the static equivalent, not about the magnitude of the effect.
+\end{ineq}

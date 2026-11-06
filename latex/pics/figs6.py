@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
-"""figs6.py — два контрастных эпизода полной модели: типичный и тяжёлый.
+"""figs6.py — два контрастных эпизода полной модели: короткий и недельный.
 
 Запуск:     python latex/figs6.py           (из корня проекта)
 Результат:  latex/pics/fig_episode.png
 
-Строятся ДВА случая на одном наборе (#735 из принятой выборки), без поиска:
+Строятся ДВА случая на двух принятых наборах из выборки, без поиска:
 
-  A. ТИПИЧНЫЙ  — k_d = 2 мВ, без петли ёмкости: редкий короткий эпизод (около 1,5 сут)
-     с ясным продромом (сон портится до срыва) и быстрым возвратом.
+  A. КОРОТКИЙ — набор #587, k_d = 3.05 мВ: редкий эпизод ~2,4 сут с одной очень короткой
+     ночью (сон падает с ~8 ч до ~3 ч), с продромом и быстрым возвратом.
 
-  B. ТЯЖЁЛЫЙ   — k_d = 4 мВ и петля ёмкости a_n = 0.3 (потеря ёмкости защиты, возврат
-     30 сут): популяция сваливается в длинный эпизод (десятки суток) с D = 1, сон
-     сходит почти на нет (пропущенные ночи), возврат медленный.
+  B. НЕДЕЛЬНЫЙ — набор #857, k_d = 3.3 мВ: эпизод ~6,3 сут с пропущенными ночами
+     (сон 1–2 ч несколько ночей подряд), затем возврат.
 
-Ряды: положение нагрузки в окне q(t); доля повреждённых D и средняя доля рабочего
-фермента x; защита c, наработанный белок s и сигнал индукции m; сон (ч/сутки) и
-сомноген G (точные значения). Ось времени — сутки от конца разгона, общая для обоих.
+Разгон 40 сут, чтобы холодный старт не лез в записанное окно. Ряды: положение нагрузки
+в окне q(t); доля повреждённых D и средняя доля рабочего фермента x; защита c, белок s
+и сигнал индукции m; сон (ч/сутки) и сомноген G (точные значения). Ось времени —
+сутки относительно начала эпизода.
 """
 import math, os, sys
 import numpy as np
@@ -34,10 +34,10 @@ from px.consts import (NAMES, Q, F, TAUV, TAUM, NVM, NMV, A_M, NVC, ALPHA, TR, T
                        COL, INK)
 
 M = 800                                   # шагов на сутки (средние сходятся уже при M = 800)
-WARM, NDAYS = 16, 60                      # разгон и горизонт, сутки
+WARM, NDAYS = 40, 60                      # разгон и горизонт, сутки
 SIGMA, TAU_REL, SIGV, J = 0.08, 0.3, 0.10, 32
 MIN_DUR = 0.3                             # минимальная длительность эпизода, сутки
-PROD, AFTER = 10.0, 10.0                  # окно до/после эпизода для ТИПИЧНОГО случая
+PROD, AFTER = 10.0, 10.0                  # сколько суток рисовать до и после эпизода
 
 plt.rcParams.update({'font.size': 9.5, 'font.family': 'DejaVu Sans', 'savefig.facecolor': 'white',
                      'axes.spines.top': False, 'axes.spines.right': False,
@@ -48,8 +48,8 @@ def run_trace(p, nu0, thr, xhi, xlo, aH, Gbar, qw, seed, kd=2.0,
               a_n=0.0, taun_dn=1.0, taun_up=30.0, nu_mul=1.0, t_boost=0.0, boost_dur=0.0):
     """Полный шаг модели (как px.model.trace, sigs = 0), с записью главных переменных.
 
-    Возвращает словарь кривых и первый эпизод (onset, end в сутках от конца разгона,
-    released — закончился ли он до горизонта), или None, если эпизода нет."""
+    Возвращает словарь кривых и первый эпизод В ЗАПИСАННОМ ОКНЕ (onset >= 0, в сутках от
+    конца разгона), или None, если эпизода в окне нет."""
     day = p['r'] * p['T']; dt = day / M; dth = 24. / M; ds = dth / NSUB
     v = vuln(J, SIGV)[0]; tauL = 0.1 * p['T']
     ea = math.exp(-dt / (TAU_REL * p['T'])); sdn = SIGMA * math.sqrt(1 - ea * ea)
@@ -102,7 +102,7 @@ def run_trace(p, nu0, thr, xhi, xlo, aH, Gbar, qw, seed, kd=2.0,
         TT[i] = td; AW[i] = aw; LS[i] = L; DS[i] = D
         XS[i] = x.mean(); CS[i] = c.mean(); SS[i] = sP.mean(); MS[i] = mR.mean()
         US[i] = float(np.log(np.maximum(u, 1e-30)).mean()); GS[i] = G; ES_[i] = E; ERS[i] = Er
-    # первый эпизод: непрерывный участок D > 1/2 длиной не меньше MIN_DUR
+    # первый эпизод в записанном окне: непрерывный участок D > 1/2 длиной не меньше MIN_DUR
     runs = []; i0 = None
     for i in range(len(DS)):
         if DS[i] > 0.5:
@@ -113,6 +113,7 @@ def run_trace(p, nu0, thr, xhi, xlo, aH, Gbar, qw, seed, kd=2.0,
             i0 = None
     if i0 is not None and (len(DS) - i0) / M >= MIN_DUR:
         runs.append((i0, len(DS)))
+    runs = [(a, b) for (a, b) in runs if a / M - WARM >= PROD]
     if not runs:
         return None
     i0, i1 = runs[0]
@@ -127,24 +128,22 @@ def main():
     S = cfg.sets(log=print)
     q = cfg.d['sets']['q']
 
-    k = 735                                                        # принятый набор (см. print ниже)
-    p = {nm: float(S['P'][nm][k]) for nm in NAMES + ['r']}
-    nu0 = float(S['lo'][k] * (S['hi'][k] / S['lo'][k]) ** q)
-    thr, xhi, xlo = float(S['thr'][k]), float(S['xhi'][k]), float(S['xlo'][k])
-    aH, Gbar, qw = float(S['A_H']), float(S['Gbar']), float(S['qw'])
+    def case(k, kd, a_n, seed, tag):
+        p = {nm: float(S['P'][nm][k]) for nm in NAMES + ['r']}
+        nu0 = float(S['lo'][k] * (S['hi'][k] / S['lo'][k]) ** q)
+        res = run_trace(p, nu0, float(S['thr'][k]), float(S['xhi'][k]), float(S['xlo'][k]),
+                        float(S['A_H']), float(S['Gbar']), float(S['qw']), seed,
+                        kd=kd, a_n=a_n)
+        return dict(k=k, p=p, res=res, kd=kd, a_n=a_n, tag=tag)
 
-    # A. ТИПИЧНЫЙ: k_d = 2 мВ, нет петли ёмкости; короткий эпизод с продромом.
-    r1 = run_trace(p, nu0, thr, xhi, xlo, aH, Gbar, qw, seed=3, kd=2.0)
-    # B. ТЯЖЁЛЫЙ: k_d = 4 мВ + петля ёмкости; длинный эпизод, пропущенные ночи.
-    r2 = run_trace(p, nu0, thr, xhi, xlo, aH, Gbar, qw, seed=0, kd=4.0, a_n=0.3)
-
-    cases = [dict(k=k, p=p, res=r1, kd=2.0, a_n=0.0, tag='typical'),
-             dict(k=k, p=p, res=r2, kd=4.0, a_n=0.3, tag='severe, skipped nights')]
+    # A. короткий эпизод, одна очень короткая ночь; B. недельный эпизод, пропущенные ночи.
+    cases = [case(587, 3.05, 0.0, 0, 'short episode, one short night'),
+             case(857, 3.30, 0.0, 0, 'week episode, skipped nights')]
 
     for c in cases:
         r = c['res']; dur = r['end'] - r['onset']
-        print('  набор #%d (%s): k_d = %.0f мВ, a_n = %.1f, эпизод: день %.1f, %.2f сут, released %s'
-              % (c['k'], c['tag'], c['kd'], c['a_n'], r['onset'], dur, r['released']))
+        print('  набор #%d (%s): k_d = %.2f мВ, эпизод: день %.1f, %.2f сут'
+              % (c['k'], c['tag'], c['kd'], r['onset'], dur))
         print('    параметры: %s' % {nm: '%.3g' % c['p'][nm] for nm in NAMES})
 
     _plot(cases, S, q)
@@ -157,34 +156,24 @@ def _daily_sleep(res, m):
     dabs = np.floor(res['TT'][m]).astype(int)
     days = np.unique(dabs)
     sleep = np.array([24. - 24. * res['AW'][m][dabs == d].mean() for d in days])
-    return days + 0.5, sleep
+    return days + 0.5 - res['onset'], sleep
 
 
 def _plot(cases, S, q):
     n = len(cases)
-    fig, axes = plt.subplots(4, n, figsize=(6.4 * n, 9.8), squeeze=False)
-    fig.suptitle('One episode, two situations: typical vs. severe (same parameter set, different couplings)',
+    fig, axes = plt.subplots(4, n, figsize=(6.4 * n, 9.8), squeeze=False, sharex='col')
+    fig.suptitle('Two episodes of the full model: a short one and a week-long one',
                  fontsize=11, y=0.995)
     for col, c in enumerate(cases):
         r = c['res']; lo = float(S['lo'][c['k']]); hi = float(S['hi'][c['k']])
-        ep0, ep1 = r['onset'], r['end']
-        if c['tag'] == 'typical':
-            x0, x1 = ep0 - PROD, ep1 + AFTER
-            prod = (ep0 - PROD, ep0)
-        else:
-            x0, x1 = -1.0, min(ep1 + 6.0, NDAYS)
-            prod = None
-            ep0 = max(ep0, 0.0)
-        m = (r['TT'] >= x0) & (r['TT'] <= x1)
-        tt = r['TT'][m]
-        dur = ep1 - ep0 if c['tag'] == 'typical' else ep1
-
+        dur = r['end'] - r['onset']
+        m = (r['TT'] >= r['onset'] - PROD) & (r['TT'] <= r['end'] + AFTER)
+        tt = r['TT'][m] - r['onset']
         for ax in axes[:, col]:
-            if prod is not None:
-                ax.axvspan(prod[0], prod[1], color='#f2c078', alpha=0.35, zorder=0)   # продром
-            ax.axvspan(ep0, ep1, color='#e9897e', alpha=0.35, zorder=0)              # эпизод
-        axes[0, col].set_title('Case %s (%s): set #%d, k_d = %.0f mV, episode %.1f d'
-                               % ('AB'[col], c['tag'], c['k'], c['kd'], ep1 - ep0), fontsize=9)
+            ax.axvspan(-PROD, 0, color='#f2c078', alpha=0.35, zorder=0)   # продром
+            ax.axvspan(0, dur, color='#e9897e', alpha=0.35, zorder=0)     # эпизод
+        axes[0, col].set_title('Case %s (%s): set #%d, k_d = %.2f mV, episode %.1f d'
+                               % ('AB'[col], c['tag'], c['k'], c['kd'], dur), fontsize=9)
 
         ax = axes[0, col]                                              # нагрузка в окне
         qp = (np.log(r['LS']) - math.log(lo)) / math.log(hi / lo)
@@ -193,7 +182,7 @@ def _plot(cases, S, q):
         ax.axhline(q, color=INK, lw=0.7, ls=':')
         ax.set_ylabel('load position q(t)\n(0 = lower, 1 = upper boundary)')
         ax.set_ylim(-1.0, 1.8)
-        ax.set_xlim(x0, x1)
+        ax.set_xlim(-PROD, dur + AFTER)
 
         ax = axes[1, col]                                              # популяция
         ax.plot(tt, r['DS'][m], color=COL[1], lw=1.3, label='damaged share D')
@@ -220,7 +209,7 @@ def _plot(cases, S, q):
         ax2.tick_params(axis='y', colors=COL[0])
         ax2.legend(fontsize=8, loc='upper left', frameon=True, framealpha=0.88, edgecolor='none')
         ax.legend(fontsize=8, loc='upper right', frameon=True, framealpha=0.88, edgecolor='none')
-        ax.set_xlabel('days from end of warm-up')
+        ax.set_xlabel('days relative to episode onset')
 
     fig.tight_layout(pad=0.9, rect=[0, 0, 1, 0.985])
 
